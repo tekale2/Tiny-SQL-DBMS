@@ -7,4 +7,4 @@ StorageManager.o: Block.h Disk.h Field.h MainMemory.h Relation.h Schema.h Schema
 	g++ -c StorageManager.cpp
 
 clean:
-	TestStorageManager
+	rm *.o TestStorageManager
