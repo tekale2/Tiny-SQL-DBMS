@@ -56,7 +56,7 @@ vector<string> tokenize(string &query)
 }
 
 // Generates a parse tree for create statement
-Node *genCreateTree(vector<string> &tokens)
+static Node *genCreateTree(vector<string> &tokens)
 {
 	Node *curr;
 	int idx;
@@ -81,7 +81,17 @@ Node *genCreateTree(vector<string> &tokens)
 	return root;
 }
 
-// Generates a parse tree and returns the root
+// Generates a parse tree for drop table statement
+static Node *genDropTableTree(vector<string> &tokens)
+{
+	Node *root = new Node(NODE_TYPE::DROP_QUERY,"<drop-query>");
+	root->children.push_back(new Node(NODE_TYPE::DROP,"DROP"));
+	root->children.push_back(new Node(NODE_TYPE::TABLE,"TABLE"));
+	root->children.push_back(new Node(NODE_TYPE::TABLE_NAME,tokens[2]));
+
+	return root;
+}
+// Generates a parse tree for the input query and returns the root
 Node *parseQuery(string &query)
 {
 	Node *root;
@@ -92,6 +102,14 @@ Node *parseQuery(string &query)
 	// generate tree based on type of the statement
 	if(tokens[0] == "CREATE" && tokens[1] == "TABLE")
 		root = genCreateTree(tokens);
+	else if(tokens[0] == "DROP" && tokens[1] == "TABLE" && tokens.size()==3)
+		root = genDropTableTree(tokens);
+	else if(tokens[0] == "DELETE" && tokens[1] == "FROM")
+		root = NULL;//genDeleteTree(tokens);
+	else if(tokens[0] == "INSERT" && tokens[1] == "INTO")
+		root = NULL;//genInsertTree(tokens);
+	else if(tokens[0] == "SELECT")
+		root = NULL; //genSelectTree(tokens);
 	else
 		root = NULL;
 	return root;
