@@ -10,4 +10,4 @@ parser.o: parser.h
 	$(cc) -c parser.cpp
 
 clean:
-	TinySql
+	rm TinySql

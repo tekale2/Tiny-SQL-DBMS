@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "parser.h"
 
@@ -6,10 +7,10 @@ using namespace std;
 
 int main()
 {
-	vector<string> result;
-	string query = "INSERT INTO testTable ( Id , kl, e) VALUES (\"30\", \"text\", \"34\" )";
-	result = tokenize(query);
-	for(string &str:result)
-		cout<<str<<endl;
+	Node *root;
+	string query = "CREATE TABLE testTable ( q STR20, r INT, s STR20)";
+	root = parseQuery(query);
+	root->printTree(0);
+	delete root;
 	return 0;
 }
