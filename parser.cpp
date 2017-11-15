@@ -91,6 +91,33 @@ static Node *genDropTableTree(vector<string> &tokens)
 
 	return root;
 }
+
+// Generates a parse tree for delete statement
+static Node *genDeleteTree(vector<string> &tokens)
+{
+	string condStr;
+	int idx;
+	Node *root = new Node(NODE_TYPE::DELETE_QUERY,"<delete-query>");
+	root->children.push_back(new Node(NODE_TYPE::DELETE,"DELETE"));
+	root->children.push_back(new Node(NODE_TYPE::FROM,"FROM"));
+	root->children.push_back(new Node(NODE_TYPE::TABLE_NAME,tokens[2]));
+	if(tokens.size() > 3)
+	{
+		root->children.push_back(new Node(NODE_TYPE::WHERE,"WHERE"));
+		idx = 4;
+		condStr = tokens[idx];
+		for(idx = 5;idx<tokens.size();idx++)
+		{
+			condStr+=" ";
+			condStr+=tokens[idx];
+		}
+		Node *temp = new Node(NODE_TYPE::SEARCH_CONDITION,"<search-condition>");
+		temp->children.push_back(new Node(NODE_TYPE::CONDITION_STR,condStr));
+		root->children.push_back(temp);
+	}
+	return root;
+}
+
 // Generates a parse tree for the input query and returns the root
 Node *parseQuery(string &query)
 {
@@ -105,7 +132,7 @@ Node *parseQuery(string &query)
 	else if(tokens[0] == "DROP" && tokens[1] == "TABLE" && tokens.size()==3)
 		root = genDropTableTree(tokens);
 	else if(tokens[0] == "DELETE" && tokens[1] == "FROM")
-		root = NULL;//genDeleteTree(tokens);
+		root = genDeleteTree(tokens);
 	else if(tokens[0] == "INSERT" && tokens[1] == "INTO")
 		root = NULL;//genInsertTree(tokens);
 	else if(tokens[0] == "SELECT")
