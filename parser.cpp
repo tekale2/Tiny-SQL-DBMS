@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "parser.h"
 
 using namespace std;
@@ -56,7 +57,7 @@ vector<string> tokenize(string &query)
 }
 
 // Generates a parse tree for create statement
-static Node *genCreateTree(vector<string> &tokens)
+static Node* genCreateTree(vector<string> &tokens)
 {
 	Node *curr;
 	int idx;
@@ -82,7 +83,7 @@ static Node *genCreateTree(vector<string> &tokens)
 }
 
 // Generates a parse tree for drop table statement
-static Node *genDropTableTree(vector<string> &tokens)
+static Node* genDropTableTree(vector<string> &tokens)
 {
 	Node *root = new Node(NODE_TYPE::DROP_QUERY,"<drop-query>");
 	root->children.push_back(new Node(NODE_TYPE::DROP,"DROP"));
@@ -93,7 +94,7 @@ static Node *genDropTableTree(vector<string> &tokens)
 }
 
 // Generates a parse tree for delete statement
-static Node *genDeleteTree(vector<string> &tokens)
+static Node* genDeleteTree(vector<string> &tokens)
 {
 	string condStr;
 	int idx;
@@ -118,8 +119,108 @@ static Node *genDeleteTree(vector<string> &tokens)
 	return root;
 }
 
+static Node* genSelectTree(vector<string> &tokens)
+{
+	Node *temp, *curr;
+	string condStr;
+	int idx = 1;
+	int endIdx;
+	Node *root = new Node(NODE_TYPE::SELECT_QUERY, "<select-query>");
+	root->children.push_back(new Node(NODE_TYPE::SELECT,"SELECT"));
+	if(tokens[1] == "DISTINCT")
+	{
+		root->children.push_back(new Node(NODE_TYPE::DISTINCT,"DISTINCT"));
+		idx++;
+	}
+	temp = new Node(NODE_TYPE::SELECT_LIST,"<select-list>");
+	root->children.push_back(temp);
+	// get select list
+	if(tokens[idx] == "*")
+	{
+		temp->children.push_back(new Node(NODE_TYPE::STAR,"*"));
+		idx++;
+	}
+	else
+	{
+		auto it1 = find(tokens.begin(),tokens.end(),"FROM");
+		endIdx = it1 - tokens.begin();
+		curr = temp;
+		while(idx < endIdx)
+		{
+			temp = new Node(NODE_TYPE::SELECT_SUBLIST,"<select-sublist>");
+			curr->children.push_back(temp);
+			curr = temp;
+			curr->children.push_back(new Node(NODE_TYPE::COLUMN_NAME,tokens[idx]));
+			idx+=2;
+		}
+		idx = endIdx;
+	}
+	root->children.push_back(new Node(NODE_TYPE::FROM,"FROM"));
+
+	// get table list
+	auto it = find(tokens.begin(),tokens.end(),"WHERE");
+	if(it == tokens.end())
+	{
+		it = find(tokens.begin(),tokens.end(),"ORDER");
+		if(it==tokens.end())
+			endIdx = tokens.size();
+		else
+			endIdx = it - tokens.begin();
+
+	}
+	else
+		endIdx = it - tokens.begin();
+
+	curr = root;
+	idx++;
+	while(idx < endIdx)
+	{
+		temp = new Node(NODE_TYPE::TABLE_LIST,"<table-list>");
+		curr->children.push_back(temp);
+		curr = temp;
+		curr->children.push_back(new Node(NODE_TYPE::TABLE_NAME,tokens[idx]));
+		idx+=2;
+	}
+
+
+	// where cond
+	it = find(tokens.begin(),tokens.end(),"WHERE");
+	if(it!=tokens.end())
+	{
+		root->children.push_back(new Node(NODE_TYPE::WHERE,"WHERE"));
+		idx =  it - tokens.begin();
+		idx++;
+		condStr = tokens[idx++];
+		it = find(tokens.begin(),tokens.end(),"ORDER");
+		endIdx = (it==tokens.end())? tokens.size():(it-tokens.begin());
+		for(;idx<endIdx;idx++)
+		{
+			condStr+=" ";
+			condStr+=tokens[idx];
+		}
+		Node *temp = new Node(NODE_TYPE::SEARCH_CONDITION,"<search-condition>");
+		temp->children.push_back(new Node(NODE_TYPE::CONDITION_STR,condStr));
+		root->children.push_back(temp);
+	}
+	it = find(tokens.begin(),tokens.end(),"ORDER");
+	if(it!=tokens.end())
+	{
+		idx = it - tokens.begin();
+		root->children.push_back(new Node(NODE_TYPE::ORDER,"ORDER"));
+		root->children.push_back(new Node(NODE_TYPE::BY,"BY"));
+		root->children.push_back(new Node(NODE_TYPE::COLUMN_NAME,tokens[idx+2]));
+	}
+
+	return root;
+}
+
+static Node* genInsertTree(vector<string> &tokens)
+{
+	Node *root;
+	return root;
+}
 // Generates a parse tree for the input query and returns the root
-Node *parseQuery(string &query)
+Node* parseQuery(string &query)
 {
 	Node *root;
 	vector<string> tokens;
@@ -134,9 +235,9 @@ Node *parseQuery(string &query)
 	else if(tokens[0] == "DELETE" && tokens[1] == "FROM")
 		root = genDeleteTree(tokens);
 	else if(tokens[0] == "INSERT" && tokens[1] == "INTO")
-		root = NULL;//genInsertTree(tokens);
+		root = genInsertTree(tokens);
 	else if(tokens[0] == "SELECT")
-		root = NULL; //genSelectTree(tokens);
+		root = genSelectTree(tokens);
 	else
 		root = NULL;
 	return root;

@@ -74,5 +74,5 @@ public:
 };
 
 // Returns the root of the generated parse tree from the query
-Node *parseQuery(string &query);
+Node* parseQuery(string &query);
 #endif
