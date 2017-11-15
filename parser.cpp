@@ -119,6 +119,7 @@ static Node* genDeleteTree(vector<string> &tokens)
 	return root;
 }
 
+// Generates a parse tree for select statement
 static Node* genSelectTree(vector<string> &tokens)
 {
 	Node *temp, *curr;
@@ -214,11 +215,55 @@ static Node* genSelectTree(vector<string> &tokens)
 	return root;
 }
 
+// Generates a parse tree for Insert statement
 static Node* genInsertTree(vector<string> &tokens)
 {
-	Node *root;
+	int idx = 3;
+	int endIdx;
+	vector<string> selectTokens;
+	Node *curr, *temp, *insertTuples;
+	Node *root = new Node(NODE_TYPE::INSERT_QUERY, "<insert-query>");
+	root->children.push_back(new Node(NODE_TYPE::INSERT,"INSERT"));
+	root->children.push_back(new Node(NODE_TYPE::INTO,"INTO"));
+	root->children.push_back(new Node(NODE_TYPE::TABLE_NAME,tokens[2]));
+
+	//get attribute list
+	auto it = find(tokens.begin(),tokens.end(),")");
+	endIdx = it - tokens.begin();
+
+	curr = root;
+	idx++;
+	while(idx < endIdx)
+	{
+		temp = new Node(NODE_TYPE::ATTRIBUTE_LIST,"<attribute-list>");
+		curr->children.push_back(temp);
+		curr = temp;
+		curr->children.push_back(new Node(NODE_TYPE::ATTRIBUTE_NAME,tokens[idx]));
+		idx+=2;
+	}
+	insertTuples = new Node(NODE_TYPE::INSERT_TUPLES,"<insert-tuples>");
+	root->children.push_back(insertTuples);
+	if(tokens[endIdx+1] != "VALUES")
+	{
+		for(int i = endIdx+1;i<tokens.size();i++)
+			selectTokens.push_back(tokens[i]);
+		insertTuples->children.push_back(genSelectTree(selectTokens));
+	}
+	else
+	{
+		insertTuples->children.push_back(new Node(NODE_TYPE::VALUES,"VALUES"));
+		curr = insertTuples;
+		for(idx = endIdx+3;idx<tokens.size();idx+=2)
+		{
+			temp = new Node(NODE_TYPE::VALUE_LIST,"<value-list>");
+			curr->children.push_back(temp);
+			curr = temp;
+			curr->children.push_back(new Node(NODE_TYPE::VALUE,tokens[idx]));
+		}
+	}
 	return root;
 }
+
 // Generates a parse tree for the input query and returns the root
 Node* parseQuery(string &query)
 {
