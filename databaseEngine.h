@@ -25,21 +25,23 @@ class DatabaseEngine
 private:
 	MainMemory *mem;
 	Disk *disk;
-	SchemaManager schManager;
-	BufferManager bManager;
+	SchemaManager schema_manager;
+	BufferManager buffer_manager;
 
 	bool execCreateQuery(Node *root);
 	bool execDropQuery(Node *root);
 	bool execInsertQuery(Node *root);
+	bool execDeleteQuery(Node *root);
+	bool execSelectQuery(Node *root);
 
 public:
 
 	DatabaseEngine(MainMemory *mem, Disk *disk);
 
 	// logger function to log output
-	void log(string type, string value);
+	void log(string value);
 	// the main functions which takens in raw query as input
-	bool execQuery(string query);
+	string execQuery(string query);
 
 	
 };
