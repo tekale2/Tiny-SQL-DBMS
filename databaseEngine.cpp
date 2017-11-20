@@ -22,7 +22,10 @@ bool DatabaseEngine::execCreateQuery(Node *root)
 
 bool DatabaseEngine::execDropQuery(Node *root)
 {
-	return false;
+	string table_name;
+	table_name = getNodeVal(NODE_TYPE::TABLE_NAME,root);
+	schema_manager.deleteRelation(table_name);
+	return true;
 }
 
 bool DatabaseEngine::execInsertQuery(Node *root)
