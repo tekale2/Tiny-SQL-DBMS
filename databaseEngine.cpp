@@ -1,6 +1,32 @@
 #include "databaseEngine.h"
 using namespace std;
 
+/*--------------Private Functions-------------------*/
+
+// Appends a tuple to the end of a relation (taken from TestStorageManager.cpp)
+// using memory block "memory_block_index" as output buffer
+static void appendTupleToRelation(Relation* relation_ptr, MainMemory *mem, int memory_block_index, Tuple& tuple) 
+{
+  Block* block_ptr;
+  if (relation_ptr->getNumOfBlocks()==0) {
+    block_ptr=mem->getBlock(memory_block_index);
+    block_ptr->clear(); //clear the block
+    block_ptr->appendTuple(tuple); // append the tuple
+    relation_ptr->setBlock(relation_ptr->getNumOfBlocks(),memory_block_index);
+  } else {
+    relation_ptr->getBlock(relation_ptr->getNumOfBlocks()-1,memory_block_index);
+    block_ptr=mem->getBlock(memory_block_index);
+
+    if (block_ptr->isFull()) {
+      block_ptr->clear(); //clear the block
+      block_ptr->appendTuple(tuple); // append the tuple
+      relation_ptr->setBlock(relation_ptr->getNumOfBlocks(),memory_block_index); //write back to the relation
+    } else {
+      block_ptr->appendTuple(tuple); // append the tuple
+      relation_ptr->setBlock(relation_ptr->getNumOfBlocks()-1,memory_block_index); //write back to the relation
+    }
+  }  
+}
 
 /*--------------Private Class Functions-------------*/
 bool DatabaseEngine::execCreateQuery(Node *root)
@@ -30,7 +56,74 @@ bool DatabaseEngine::execDropQuery(Node *root)
 
 bool DatabaseEngine::execInsertQuery(Node *root)
 {
-	return false;
+	string table_name;
+	vector<string> values, attrList;
+	int memIdx,value;
+	bool validTuple = true;
+	enum FIELD_TYPE field_type;
+	table_name = getNodeVal(NODE_TYPE::TABLE_NAME,root);
+	Relation* relation_ptr;
+	relation_ptr = schema_manager.getRelation(table_name);
+
+	if(relation_ptr == NULL)
+		return false;
+
+	if( hasNode(NODE_TYPE::VALUES, root))
+	{
+		values = getNodeTypeLists(NODE_TYPE::VALUE_LIST,root);
+		attrList = getNodeTypeLists(NODE_TYPE::ATTRIBUTE_LIST,root);
+		Tuple tuple =  relation_ptr->createTuple();
+		Schema schema = relation_ptr->getSchema();
+		
+		// make tuple
+		for(int i = 0; i<values.size();i++)
+		{
+			field_type = schema.getFieldType(attrList[i]);
+			if(field_type == FIELD_TYPE::INT)
+			{
+				try
+				{
+					value = stoi(values[i]);
+				}
+				catch(...)
+				{
+					log("Exception occurred when coverting string to int");
+					return false;
+				}
+				validTuple = tuple.setField(attrList[i],value);
+			}
+			else
+			{
+				validTuple = tuple.setField(attrList[i],values[i]);
+			}
+			if(!validTuple)
+				return false;
+		}
+
+		//get a free mem block and append
+		memIdx = buffer_manager.getFreeBlockIdx();
+		if(memIdx == -1)
+		{
+			log("Out of free memory blocks");
+			return false;
+		}
+
+		appendTupleToRelation(relation_ptr, mem, memIdx, tuple);
+		buffer_manager.storeFreeBlockIdx(memIdx);
+		  cout << "Now the memory contains: " << endl;
+		  cout << *mem << endl;
+		  cout << "Now the relation contains: " << endl;
+		  cout << *relation_ptr << endl << endl;
+	}
+	else
+	{
+		// TODO: Implement after select
+		return false;
+	}
+
+
+
+	return true;
 }
 
 bool DatabaseEngine::execDeleteQuery(Node *root)
