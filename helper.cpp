@@ -51,6 +51,7 @@ bool hasNode(enum NODE_TYPE nodeType, Node *root)
 string getNodeVal(enum NODE_TYPE nodeType, Node *root)
 {
 	queue<Node*> nodeQ;
+	string result;
 	Node *temp;
 	Node *found = NULL;
 	nodeQ.push(root);
@@ -66,7 +67,8 @@ string getNodeVal(enum NODE_TYPE nodeType, Node *root)
 		for(int i = 0;i<temp->children.size();i++)
 			nodeQ.push(temp->children[i]);
 	}
-	return found->nodeVal;	
+	result = (found==NULL)? "Not Found":found->nodeVal;
+	return result;	
 }
 
 // loads the vectors with dataTypes and columnsNames

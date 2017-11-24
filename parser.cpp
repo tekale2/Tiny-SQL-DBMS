@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <sstream>
 #include "parser.h"
 
 using namespace std;
@@ -9,7 +10,16 @@ vector<string> tokenize(string &query)
 	int firstIdx = 0;
 	int i = 0;
 	bool inQuotes = false;
-	for(i = 0; i<query.size();i++)
+	int start = 0;
+	int end = query.size()-1;
+
+	// trim spaces in start and end
+	while(query[start]==' ')
+		start++;
+	while(query[end]==' ' || query[end]==';')
+		end--;
+
+	for(i = start; i<=end;i++)
 	{
 		if(!inQuotes && query[i] == '"')
 	    {
@@ -50,8 +60,11 @@ vector<string> tokenize(string &query)
 	    }
 	}
 
-	if(firstIdx <i)
+	if(firstIdx <i && firstIdx < (query.size()-1))
+	{
 		result.push_back(query.substr(firstIdx,i - firstIdx));
+		cout<<"result: "<<result.back()<<endl;
+	}
 
 	return result;
 }
@@ -98,6 +111,9 @@ static Node* genDeleteTree(vector<string> &tokens)
 {
 	string condStr;
 	int idx;
+cout<<"tokens:"<<endl;
+for(string &str:tokens)
+	cout<<str<<endl;
 	Node *root = new Node(NODE_TYPE::DELETE_QUERY,"<delete-query>");
 	root->children.push_back(new Node(NODE_TYPE::DELETE,"DELETE"));
 	root->children.push_back(new Node(NODE_TYPE::FROM,"FROM"));
@@ -116,6 +132,7 @@ static Node* genDeleteTree(vector<string> &tokens)
 		temp->children.push_back(new Node(NODE_TYPE::CONDITION_STR,condStr));
 		root->children.push_back(temp);
 	}
+	cout<<"root "<<root<<endl;
 	return root;
 }
 

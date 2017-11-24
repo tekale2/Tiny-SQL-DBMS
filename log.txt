@@ -1,0 +1,9054 @@
+
+
+************************************************************
+Input Query:->  CREATE TABLE course (sid INT, homework INT, project INT, exam INT, grade STR20)
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (1, 99, 100, 100, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+******RELATION DUMP END******
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+SUCCESS
+result: course
+
+
+************************************************************
+Input Query:->  SELECT * FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (2, NULL, 100, 100, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 2	0	100	100	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+result: course
+
+
+************************************************************
+Input Query:->  SELECT * FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, grade, exam, project, homework) VALUES (3, "E", 100, 100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 2	0	100	100	E	
+2: 3	100	100	100	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+result: course
+
+
+************************************************************
+Input Query:->  SELECT * FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) SELECT * FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course
+
+
+************************************************************
+Input Query:->  SELECT * FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+tokens:
+DELETE
+FROM
+course
+WHERE
+grade
+=
+E
+root 0xd3d940
+
+
+************************************************************
+Input Query:->  DELETE FROM course WHERE grade = "E"
+Before Delete the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 2	0	100	100	E	
+2: 3	100	100	100	E	
+******RELATION DUMP END******
+
+found variable: grade
+E
+found INT CONST: E
+found STR CONST: E
+Token 2: E  Token 1: A Operator: = Result: 0
+found variable: grade
+E
+found INT CONST: E
+found STR CONST: E
+Token 2: E  Token 1: E Operator: = Result: 1
+found variable: grade
+E
+found INT CONST: E
+found STR CONST: E
+Token 2: E  Token 1: E Operator: = Result: 1
+After Delete the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+******RELATION DUMP END******
+
+Disk I/O count: 4
+Query Exec Time: 298.520000 ms
+************************************************************
+
+
+SUCCESS
+result: course
+
+
+************************************************************
+Input Query:->  SELECT * FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (4, 99, 100, 100, "B")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+result: course
+
+
+************************************************************
+Input Query:->  SELECT * FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course
+tokens:
+DELETE
+FROM
+course
+root 0xd3d940
+
+
+************************************************************
+Input Query:->  DELETE FROM course
+getRelation ERROR: relation course does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course
+
+
+************************************************************
+Input Query:->  SELECT * FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course
+
+
+************************************************************
+Input Query:->  DROP TABLE course
+deleteRelation ERROR: relation course does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+result: #
+Error in parsing query:->#
+FAILED
+
+
+************************************************************
+Input Query:->  CREATE TABLE course (sid INT, homework INT, project INT, exam INT, grade STR20)
+createRelation ERROR: course already exists
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (1, 99, 100, 100, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (3, 100, 100, 98, "C")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (3, 100, 69, 64, "C")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (15, 100, 50, 90, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (15, 100, 99, 100, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (17, 100, 100, 100, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (2, 100, 100, 99, "B")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (4, 100, 100, 97, "D")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (5, 100, 100, 66, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (6, 100, 100, 65, "B")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (7, 100, 50, 73, "C")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (8, 50, 50, 62, "C")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (9, 50, 50, 61, "D")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (10, 50, 70, 70, "C")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (11, 50, 50, 59, "D")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (12, 0, 70, 58, "C")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (13, 0, 50, 77, "C")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (14, 50, 50, 56, "D")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+51: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+51: 16	0	0	0	E	
+52: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+51: 16	0	0	0	E	
+52: 16	0	0	0	E	
+53: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+51: 16	0	0	0	E	
+52: 16	0	0	0	E	
+53: 16	0	0	0	E	
+54: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+51: 16	0	0	0	E	
+52: 16	0	0	0	E	
+53: 16	0	0	0	E	
+54: 16	0	0	0	E	
+55: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+51: 16	0	0	0	E	
+52: 16	0	0	0	E	
+53: 16	0	0	0	E	
+54: 16	0	0	0	E	
+55: 16	0	0	0	E	
+56: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+51: 16	0	0	0	E	
+52: 16	0	0	0	E	
+53: 16	0	0	0	E	
+54: 16	0	0	0	E	
+55: 16	0	0	0	E	
+56: 16	0	0	0	E	
+57: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+51: 16	0	0	0	E	
+52: 16	0	0	0	E	
+53: 16	0	0	0	E	
+54: 16	0	0	0	E	
+55: 16	0	0	0	E	
+56: 16	0	0	0	E	
+57: 16	0	0	0	E	
+58: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+51: 16	0	0	0	E	
+52: 16	0	0	0	E	
+53: 16	0	0	0	E	
+54: 16	0	0	0	E	
+55: 16	0	0	0	E	
+56: 16	0	0	0	E	
+57: 16	0	0	0	E	
+58: 16	0	0	0	E	
+59: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+51: 16	0	0	0	E	
+52: 16	0	0	0	E	
+53: 16	0	0	0	E	
+54: 16	0	0	0	E	
+55: 16	0	0	0	E	
+56: 16	0	0	0	E	
+57: 16	0	0	0	E	
+58: 16	0	0	0	E	
+59: 16	0	0	0	E	
+60: 16	0	0	0	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course (sid, homework, project, exam, grade) VALUES (17, 100, 100, 100, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	homework	project	exam	grade	
+0: 1	99	100	100	A	
+1: 4	99	100	100	B	
+2: 1	99	100	100	A	
+3: 3	100	100	98	C	
+4: 3	100	69	64	C	
+5: 15	100	50	90	E	
+6: 15	100	99	100	E	
+7: 17	100	100	100	A	
+8: 2	100	100	99	B	
+9: 4	100	100	97	D	
+10: 5	100	100	66	A	
+11: 6	100	100	65	B	
+12: 7	100	50	73	C	
+13: 8	50	50	62	C	
+14: 9	50	50	61	D	
+15: 10	50	70	70	C	
+16: 11	50	50	59	D	
+17: 12	0	70	58	C	
+18: 13	0	50	77	C	
+19: 14	50	50	56	D	
+20: 16	0	0	0	E	
+21: 16	0	0	0	E	
+22: 16	0	0	0	E	
+23: 16	0	0	0	E	
+24: 16	0	0	0	E	
+25: 16	0	0	0	E	
+26: 16	0	0	0	E	
+27: 16	0	0	0	E	
+28: 16	0	0	0	E	
+29: 16	0	0	0	E	
+30: 16	0	0	0	E	
+31: 16	0	0	0	E	
+32: 16	0	0	0	E	
+33: 16	0	0	0	E	
+34: 16	0	0	0	E	
+35: 16	0	0	0	E	
+36: 16	0	0	0	E	
+37: 16	0	0	0	E	
+38: 16	0	0	0	E	
+39: 16	0	0	0	E	
+40: 16	0	0	0	E	
+41: 16	0	0	0	E	
+42: 16	0	0	0	E	
+43: 16	0	0	0	E	
+44: 16	0	0	0	E	
+45: 16	0	0	0	E	
+46: 16	0	0	0	E	
+47: 16	0	0	0	E	
+48: 16	0	0	0	E	
+49: 16	0	0	0	E	
+50: 16	0	0	0	E	
+51: 16	0	0	0	E	
+52: 16	0	0	0	E	
+53: 16	0	0	0	E	
+54: 16	0	0	0	E	
+55: 16	0	0	0	E	
+56: 16	0	0	0	E	
+57: 16	0	0	0	E	
+58: 16	0	0	0	E	
+59: 16	0	0	0	E	
+60: 16	0	0	0	E	
+61: 17	100	100	100	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+result: course
+
+
+************************************************************
+Input Query:->  SELECT * FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course
+
+
+************************************************************
+Input Query:->  SELECT sid, grade FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course
+
+
+************************************************************
+Input Query:->  SELECT sid, course.grade FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course
+
+
+************************************************************
+Input Query:->  SELECT DISTINCT grade FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course
+
+
+************************************************************
+Input Query:->  SELECT DISTINCT * FROM course
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: exam
+
+
+************************************************************
+Input Query:->  SELECT * FROM course ORDER BY exam
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 100
+
+
+************************************************************
+Input Query:->  SELECT * FROM course WHERE exam = 100
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+
+
+************************************************************
+Input Query:->  SELECT * FROM course WHERE grade = "A"
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 100
+
+
+************************************************************
+Input Query:->  SELECT * FROM course WHERE exam = 100 AND project = 100
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 99
+
+
+************************************************************
+Input Query:->  SELECT * FROM course WHERE exam = 100 OR exam = 99
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 0
+
+
+************************************************************
+Input Query:->  SELECT * FROM course WHERE NOT exam = 0
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 70
+
+
+************************************************************
+Input Query:->  SELECT * FROM course WHERE exam > 70
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 100
+
+
+************************************************************
+Input Query:->  SELECT * FROM course WHERE exam = 100 OR homework = 100 AND project = 100
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 100
+
+
+************************************************************
+Input Query:->  SELECT * FROM course WHERE ( exam = 100 OR homework = 100 ) AND project = 100
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 200
+
+
+************************************************************
+Input Query:->  SELECT * FROM course WHERE exam + homework = 200
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 100
+
+
+************************************************************
+Input Query:->  SELECT * FROM course WHERE ( exam * 30 + homework * 20 + project * 50 ) = 100 * 100
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 100
+
+
+************************************************************
+Input Query:->  SELECT * FROM course WHERE grade = "C" AND ( exam > 70 OR project > 70 ) AND NOT ( exam * 30 + homework * 20 + project * 50 ) < 60 * 100
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+
+
+************************************************************
+Input Query:->  CREATE TABLE course2 (sid INT, exam INT, grade STR20)
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (1, 100, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+******RELATION DUMP END******
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (16, 25, "E")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (17, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+result: course2
+
+
+************************************************************
+Input Query:->  SELECT * FROM course, course2
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (2, 99, "B")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (3, 98, "C")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (4, 97, "D")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (5, 66, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (6, 65, "B")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+18	0	A	
+7: 18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+18	0	A	
+7: 18	0	A	
+18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+18	0	A	
+7: 18	0	A	
+18	0	A	
+8: 18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+18	0	A	
+7: 18	0	A	
+18	0	A	
+8: 18	0	A	
+18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+18	0	A	
+7: 18	0	A	
+18	0	A	
+8: 18	0	A	
+18	0	A	
+9: 18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+18	0	A	
+7: 18	0	A	
+18	0	A	
+8: 18	0	A	
+18	0	A	
+9: 18	0	A	
+18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+18	0	A	
+7: 18	0	A	
+18	0	A	
+8: 18	0	A	
+18	0	A	
+9: 18	0	A	
+18	0	A	
+10: 18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+18	0	A	
+7: 18	0	A	
+18	0	A	
+8: 18	0	A	
+18	0	A	
+9: 18	0	A	
+18	0	A	
+10: 18	0	A	
+18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+18	0	A	
+7: 18	0	A	
+18	0	A	
+8: 18	0	A	
+18	0	A	
+9: 18	0	A	
+18	0	A	
+10: 18	0	A	
+18	0	A	
+11: 18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO course2 (sid, exam, grade) VALUES (18, 0, "A")
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+sid	exam	grade	
+0: 1	100	A	
+16	25	E	
+1: 17	0	A	
+2	99	B	
+2: 3	98	C	
+4	97	D	
+3: 5	66	A	
+6	65	B	
+4: 18	0	A	
+18	0	A	
+5: 18	0	A	
+18	0	A	
+6: 18	0	A	
+18	0	A	
+7: 18	0	A	
+18	0	A	
+8: 18	0	A	
+18	0	A	
+9: 18	0	A	
+18	0	A	
+10: 18	0	A	
+18	0	A	
+11: 18	0	A	
+18	0	A	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+result: course2.sid
+
+
+************************************************************
+Input Query:->  SELECT course.sid, course.grade, course2.grade FROM course, course2 WHERE course.sid = course2.sid
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course2.sid
+
+
+************************************************************
+Input Query:->  SELECT DISTINCT course.grade, course2.grade FROM course, course2 WHERE course.sid = course2.sid
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course.exam
+
+
+************************************************************
+Input Query:->  SELECT * FROM course, course2 WHERE course.sid = course2.sid ORDER BY course.exam
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 100
+
+
+************************************************************
+Input Query:->  SELECT * FROM course, course2 WHERE course.sid = course2.sid AND course.exam = 100 AND course2.exam = 100
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+
+
+************************************************************
+Input Query:->  SELECT * FROM course, course2 WHERE course.sid = course2.sid AND ( course.exam = 100 OR course2.exam = 100 )
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course2.exam
+
+
+************************************************************
+Input Query:->  SELECT * FROM course, course2 WHERE course.sid = course2.sid AND course.exam > course2.exam
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: 100
+
+
+************************************************************
+Input Query:->  SELECT * FROM course, course2 WHERE course.sid = course2.sid AND course.exam > course2.exam AND course.homework = 100
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+
+
+************************************************************
+Input Query:->  SELECT * FROM course, course2 WHERE course.sid = course2.sid AND ( course.exam > course2.exam OR course.homework = 100 )
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course.exam
+
+
+************************************************************
+Input Query:->  SELECT DISTINCT course.grade, course2.grade FROM course, course2 WHERE course.sid = course2.sid AND ( course.exam > course2.exam OR course.grade = "A" AND course2.grade = "A" ) ORDER BY course.exam
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: course
+
+
+************************************************************
+Input Query:->  DROP TABLE course
+deleteRelation ERROR: relation course does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+result: course2
+
+
+************************************************************
+Input Query:->  DROP TABLE course2
+deleteRelation ERROR: relation course2 does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  CREATE TABLE r (a INT, b INT)
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  CREATE TABLE s (b INT, c INT)
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  CREATE TABLE t (a INT, c INT)
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+******RELATION DUMP END******
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (3, 3)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+100	100	
+100	100	
+8: 100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+100	100	
+100	100	
+8: 100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+100	100	
+100	100	
+8: 100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+100	100	
+100	100	
+8: 100	100	
+100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+100	100	
+100	100	
+8: 100	100	
+100	100	
+100	100	
+100	100	
+9: 100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+100	100	
+100	100	
+8: 100	100	
+100	100	
+100	100	
+100	100	
+9: 100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+100	100	
+100	100	
+8: 100	100	
+100	100	
+100	100	
+100	100	
+9: 100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+100	100	
+100	100	
+8: 100	100	
+100	100	
+100	100	
+100	100	
+9: 100	100	
+100	100	
+100	100	
+100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	b	
+0: 0	0	
+1	1	
+1	1	
+2	2	
+1: 3	3	
+0	0	
+1	1	
+2	2	
+2: 100	100	
+100	100	
+100	100	
+100	100	
+3: 100	100	
+100	100	
+100	100	
+100	100	
+4: 100	100	
+100	100	
+100	100	
+100	100	
+5: 100	100	
+100	100	
+100	100	
+100	100	
+6: 100	100	
+100	100	
+100	100	
+100	100	
+7: 100	100	
+100	100	
+100	100	
+100	100	
+8: 100	100	
+100	100	
+100	100	
+100	100	
+9: 100	100	
+100	100	
+100	100	
+100	100	
+10: 100	100	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+******RELATION DUMP END******
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+101	101	
+101	101	
+8: 101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+101	101	
+101	101	
+8: 101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+101	101	
+101	101	
+8: 101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+101	101	
+101	101	
+8: 101	101	
+101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+101	101	
+101	101	
+8: 101	101	
+101	101	
+101	101	
+101	101	
+9: 101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+101	101	
+101	101	
+8: 101	101	
+101	101	
+101	101	
+101	101	
+9: 101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+101	101	
+101	101	
+8: 101	101	
+101	101	
+101	101	
+101	101	
+9: 101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+101	101	
+101	101	
+8: 101	101	
+101	101	
+101	101	
+101	101	
+9: 101	101	
+101	101	
+101	101	
+101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+b	c	
+0: 0	0	
+2	2	
+3	3	
+0	0	
+1: 0	0	
+1	1	
+1	1	
+2	2	
+2: 2	2	
+3	3	
+3	3	
+3	3	
+3: 101	101	
+101	101	
+101	101	
+101	101	
+4: 101	101	
+101	101	
+101	101	
+101	101	
+5: 101	101	
+101	101	
+101	101	
+101	101	
+6: 101	101	
+101	101	
+101	101	
+101	101	
+7: 101	101	
+101	101	
+101	101	
+101	101	
+8: 101	101	
+101	101	
+101	101	
+101	101	
+9: 101	101	
+101	101	
+101	101	
+101	101	
+10: 101	101	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+******RELATION DUMP END******
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (3, 3)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+102	102	
+102	102	
+8: 102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+102	102	
+102	102	
+8: 102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+102	102	
+102	102	
+8: 102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+102	102	
+102	102	
+8: 102	102	
+102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+102	102	
+102	102	
+8: 102	102	
+102	102	
+102	102	
+102	102	
+9: 102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+102	102	
+102	102	
+8: 102	102	
+102	102	
+102	102	
+102	102	
+9: 102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+102	102	
+102	102	
+8: 102	102	
+102	102	
+102	102	
+102	102	
+9: 102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+102	102	
+102	102	
+8: 102	102	
+102	102	
+102	102	
+102	102	
+9: 102	102	
+102	102	
+102	102	
+102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+a	c	
+0: 0	0	
+1	1	
+2	2	
+0	0	
+1: 1	1	
+1	1	
+2	2	
+3	3	
+2: 102	102	
+102	102	
+102	102	
+102	102	
+3: 102	102	
+102	102	
+102	102	
+102	102	
+4: 102	102	
+102	102	
+102	102	
+102	102	
+5: 102	102	
+102	102	
+102	102	
+102	102	
+6: 102	102	
+102	102	
+102	102	
+102	102	
+7: 102	102	
+102	102	
+102	102	
+102	102	
+8: 102	102	
+102	102	
+102	102	
+102	102	
+9: 102	102	
+102	102	
+102	102	
+102	102	
+10: 102	102	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+result: s.c=t.c
+
+
+************************************************************
+Input Query:->  SELECT * FROM r, s, t WHERE r.a=t.a AND r.b=s.b AND s.c=t.c
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: r
+
+
+************************************************************
+Input Query:->  DROP TABLE r
+deleteRelation ERROR: relation r does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+result: s
+
+
+************************************************************
+Input Query:->  DROP TABLE s
+deleteRelation ERROR: relation s does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+result: t
+
+
+************************************************************
+Input Query:->  DROP TABLE t
+deleteRelation ERROR: relation t does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  CREATE TABLE t1 (c INT)
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  CREATE TABLE t2 (c INT)
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  CREATE TABLE t3 (c INT)
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  CREATE TABLE t4 (c INT)
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  CREATE TABLE t5 (c INT)
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  CREATE TABLE t6 (c INT)
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t1 (c) VALUES (0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+******RELATION DUMP END******
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t1 (c) VALUES (1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t1 (c) VALUES (2)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+1	
+2	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t1 (c) VALUES (3)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+1	
+2	
+3	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t1 (c) VALUES (4)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+1	
+2	
+3	
+4	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t2 (c) VALUES (0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+******RELATION DUMP END******
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t2 (c) VALUES (1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t2 (c) VALUES (2)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+1	
+2	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t2 (c) VALUES (3)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+1	
+2	
+3	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t3 (c) VALUES (0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+******RELATION DUMP END******
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t3 (c) VALUES (1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t3 (c) VALUES (2)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+1	
+2	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t3 (c) VALUES (3)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+1	
+2	
+3	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t4 (c) VALUES (0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+******RELATION DUMP END******
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t4 (c) VALUES (1)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+1	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t5 (c) VALUES (0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+******RELATION DUMP END******
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t5 (c) VALUES (0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+0	
+******RELATION DUMP END******
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+SUCCESS
+
+
+************************************************************
+Input Query:->  INSERT INTO t6 (c) VALUES (0)
+Now the relation contains: 
+******RELATION DUMP BEGIN******
+c	
+0: 0	
+******RELATION DUMP END******
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+SUCCESS
+result: t6
+
+
+************************************************************
+Input Query:->  SELECT * FROM t1, t2, t3, t4, t5, t6
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+FAILED
+result: t1
+
+
+************************************************************
+Input Query:->  DROP TABLE t1
+deleteRelation ERROR: relation t1 does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+result: t2
+
+
+************************************************************
+Input Query:->  DROP TABLE t2
+deleteRelation ERROR: relation t2 does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+result: t3
+
+
+************************************************************
+Input Query:->  DROP TABLE t3
+deleteRelation ERROR: relation t3 does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+result: t4
+
+
+************************************************************
+Input Query:->  DROP TABLE t4
+deleteRelation ERROR: relation t4 does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+result: t5
+
+
+************************************************************
+Input Query:->  DROP TABLE t5
+deleteRelation ERROR: relation t5 does not exist
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS
+result: t6
+
+
+************************************************************
+Input Query:->  DROP TABLE t6
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+SUCCESS

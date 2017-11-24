@@ -17,6 +17,7 @@
 #include "parser.h"
 #include "bufferManager.h"
 #include "helper.h"
+#include "whereEval.h"
 
 using namespace std;
 
