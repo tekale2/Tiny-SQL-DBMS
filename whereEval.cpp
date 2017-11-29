@@ -185,12 +185,12 @@ bool CondEval::evaluate(unordered_map<string, Field> &colValues)
           if(temp.second == TOKEN_TYPE::STR_CONST)
           {
               s2 = temp.first.strVal;
-              cout<<"Token 2: "<<s2;
+              //cout<<"Token 2: "<<s2;
           }
           else
           {
               v2 = temp.first.intVal;
-              cout<<"Token 2: "<<v2;
+              //cout<<"Token 2: "<<v2;
           }
           
           temp = evalStack.top();
@@ -199,16 +199,16 @@ bool CondEval::evaluate(unordered_map<string, Field> &colValues)
           {
               s1 = temp.first.strVal;
               v3 = evalStrings(s1,s2,str);
-              cout<<"  Token 1: "<<s1;
+              //cout<<"  Token 1: "<<s1;
           }
           else
           {
               v1 = temp.first.intVal;
-              cout<<"  Token 1: "<<v1;
+              //cout<<"  Token 1: "<<v1;
               v3 = evalInt(v1,v2,str);
           }
           
-            cout<<" Operator: "<< str<< " Result: "<<v3<<endl;
+            //cout<<" Operator: "<< str<< " Result: "<<v3<<endl;
             Tokens op;
             op.intVal = v3;
             temp = make_pair(op, INT_CONST);
@@ -218,13 +218,9 @@ bool CondEval::evaluate(unordered_map<string, Field> &colValues)
       
       else
       {
-        if(str.find("\"") != string::npos)
-        {
-
-        }
         if(colValues.count(str))
         {
-        	cout<<"found variable: "<<str<<endl;
+        	//cout<<"found variable: "<<str<<endl;
         	Tokens op;
         	if(columnType[str] == FIELD_TYPE::INT)
         	{
@@ -239,17 +235,17 @@ bool CondEval::evaluate(unordered_map<string, Field> &colValues)
         }
         else
         {
-            cout<<str<<endl;
+            //cout<<str<<endl;
             Tokens op;
             try
             {
-              cout<<"found INT CONST: "<<str<<endl;
+              //cout<<"found INT CONST: "<<str<<endl;
               op.intVal = stoi(str);
               temp = make_pair(op, INT_CONST);
             }
             catch(...)
             {
-              cout<<"found STR CONST: "<<str<<endl;
+              //cout<<"found STR CONST: "<<str<<endl;
               op.strVal = str;
               temp = make_pair(op, STR_CONST);
             }    

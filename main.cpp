@@ -19,10 +19,9 @@ int main(int argc, char *argv[])
 		infile.open(argv[1]);
 		while(getline(infile,query))
 		{
-				cout<<query<<endl;
-				if(query == "STOP")
-					break;
-				cout<<dbEngine.execQuery(query)<<endl;
+			if(query == "QUIT" || query == "quit" || query == "q")
+				break;
+			dbEngine.execQuery(query);
 
 		}
 		infile.close();
@@ -31,9 +30,9 @@ int main(int argc, char *argv[])
 	{
 		while(getline(cin,query))
 		{
-				if(query == "STOP")
-					break;
-				cout<<dbEngine.execQuery(query)<<endl;
+			if(query == "QUIT" || query == "quit" || query == "q")
+				break;
+			dbEngine.execQuery(query);
 		}
 	}
 	return 0;

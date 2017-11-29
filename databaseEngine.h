@@ -29,20 +29,30 @@ private:
 	SchemaManager schema_manager;
 	BufferManager buffer_manager;
 
+	// for holding the state for tableScan
+	vector<int> memoryBlockIndices;
+	bool resultInMemory;
+
 	bool execCreateQuery(Node *root);
 	bool execDropQuery(Node *root);
 	bool execInsertQuery(Node *root);
 	bool execDeleteQuery(Node *root);
 	bool execSelectQuery(Node *root);
 
+	// returns the pointer of temporary relation
+	Relation* tableScan(string &tableName, vector<string> &selectList, string whereCond);
+	// logger function to log output
+	void log(Relation *relation_ptr);
+	void log(Schema *schema);
+	void log(Tuple &tuple);
+	void log(string value);
+
 public:
 
 	DatabaseEngine(MainMemory *mem, Disk *disk);
 
-	// logger function to log output
-	void log(string value);
 	// the main functions which takens in raw query as input
-	string execQuery(string query);
+	void execQuery(string query);
 
 	
 };

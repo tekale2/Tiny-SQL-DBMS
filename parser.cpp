@@ -60,10 +60,9 @@ vector<string> tokenize(string &query)
 	    }
 	}
 
-	if(firstIdx <i && firstIdx < (query.size()-1))
+	if(firstIdx <i)
 	{
 		result.push_back(query.substr(firstIdx,i - firstIdx));
-		cout<<"result: "<<result.back()<<endl;
 	}
 
 	return result;
@@ -111,9 +110,6 @@ static Node* genDeleteTree(vector<string> &tokens)
 {
 	string condStr;
 	int idx;
-cout<<"tokens:"<<endl;
-for(string &str:tokens)
-	cout<<str<<endl;
 	Node *root = new Node(NODE_TYPE::DELETE_QUERY,"<delete-query>");
 	root->children.push_back(new Node(NODE_TYPE::DELETE,"DELETE"));
 	root->children.push_back(new Node(NODE_TYPE::FROM,"FROM"));
@@ -132,7 +128,6 @@ for(string &str:tokens)
 		temp->children.push_back(new Node(NODE_TYPE::CONDITION_STR,condStr));
 		root->children.push_back(temp);
 	}
-	cout<<"root "<<root<<endl;
 	return root;
 }
 

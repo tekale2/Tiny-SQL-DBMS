@@ -1,4 +1,4 @@
-cc = g++ -std=c++11
+cc = g++ -g -std=c++11
 
 all: TinySql
 	rm *.o
