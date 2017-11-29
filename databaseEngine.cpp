@@ -31,6 +31,13 @@ static void appendTupleToRelation(Relation* relation_ptr, MainMemory *mem, int m
   }  
 }
 
+static bool cmpFields(Schema s1, Schema s2)
+{
+	vector<enum FIELD_TYPE> f1 = s1.getFieldTypes();
+	vector<enum FIELD_TYPE> f2 = s2.getFieldTypes();
+	return f1 == f2;
+}
+
 // Appends a tuple to the end of a memory block (taken from TestStorageManager.cpp)
 // using memory block "memory_block_index" as destination buffer
 static bool appendTupleToMemory(MainMemory *mem, int memory_block_index, Tuple& tuple) 
@@ -101,22 +108,28 @@ bool DatabaseEngine::execInsertQuery(Node *root)
 {
 	string table_name;
 	vector<string> values, attrList;
+	vector<enum FIELD_TYPE> field_types;
+	vector<Tuple> output, tuples;
+	Block *memBlockPtr;
+	int freeMemIdx, numBlocks;
 	int memIdx,value;
 	bool validTuple = true;
 	enum FIELD_TYPE field_type;
 	table_name = getNodeVal(NODE_TYPE::TABLE_NAME,root);
 	Relation* relation_ptr;
+	Relation* outputRel;
+	Node* selectRoot;
 	relation_ptr = schema_manager.getRelation(table_name);
 
 	if(relation_ptr == NULL)
 		return false;
 
+	Schema schema = relation_ptr->getSchema();
 	if( hasNode(NODE_TYPE::VALUES, root))
 	{
 		values = getNodeTypeLists(NODE_TYPE::VALUE_LIST,root);
 		attrList = getNodeTypeLists(NODE_TYPE::ATTRIBUTE_LIST,root);
 		Tuple tuple =  relation_ptr->createTuple();
-		Schema schema = relation_ptr->getSchema();
 
 		// make tuple
 		for(int i = 0; i<values.size();i++)
@@ -161,11 +174,98 @@ bool DatabaseEngine::execInsertQuery(Node *root)
 	}
 	else
 	{
-		// TODO: Implement after select
-		return false;
+		selectRoot = getNode(NODE_TYPE::SELECT_QUERY, root);
+		if(selectRoot==NULL)
+			return false;
+		outputRel = execSelectQuery(root, false);
+		if(outputRel ==NULL)
+			return false;
+		Schema outputSchema = outputRel->getSchema();
+		if(!cmpFields(outputSchema,schema))
+			return false;
+
+		field_types = outputSchema.getFieldTypes();
+		// get tuple from output and insert into vector
+		if(resultInMemory)
+		{
+			for(int i:memoryBlockIndices)
+			{
+				memBlockPtr = mem->getBlock(i);
+				tuples = memBlockPtr->getTuples();
+				for(Tuple &t: tuples)
+				{
+					Tuple outTuple = relation_ptr->createTuple();
+					for(int j = 0; j<field_types.size();j++)
+					{
+						if(field_types[j] == FIELD_TYPE::INT)
+						{
+							int intVal = t.getField(j).integer;
+							outTuple.setField(j, intVal);
+						}
+						else
+						{
+							string strVal = *(t.getField(j).str);
+							outTuple.setField(j, strVal);
+						}
+					}
+
+					output.push_back(outTuple);	
+				}
+			}
+		}
+		else
+		{
+			numBlocks = outputRel->getNumOfBlocks();
+			freeMemIdx = buffer_manager.getFreeBlockIdx();
+
+			for(int i= 0; i<numBlocks;i++)
+			{
+				memBlockPtr = mem->getBlock(freeMemIdx);
+				memBlockPtr->clear();
+				//load the memInBlock
+				outputRel->getBlock(i,freeMemIdx);
+				tuples = memBlockPtr->getTuples();
+				for(Tuple &t: tuples)
+				{
+					Tuple outTuple = relation_ptr->createTuple();
+					for(int j = 0; j<field_types.size();j++)
+					{
+						if(field_types[j] == FIELD_TYPE::INT)
+						{
+							int intVal = t.getField(j).integer;
+							outTuple.setField(j, intVal);
+						}
+						else
+						{
+							string strVal = *(t.getField(j).str);
+							outTuple.setField(j, strVal);
+						}
+					}
+
+					output.push_back(outTuple);	
+				}
+
+			}
+			buffer_manager.storeFreeBlockIdx(freeMemIdx);
+		}
+		
+		// clean up select result
+		cleanUp(outputRel);
+
+		//get a free mem block and append
+		memIdx = buffer_manager.getFreeBlockIdx();
+		if(memIdx == -1)
+		{
+			log("Out of free memory blocks");
+			return false;
+		}
+
+		for(Tuple &tuple:output)
+			appendTupleToRelation(relation_ptr, mem, memIdx, tuple);
+		
+		buffer_manager.storeFreeBlockIdx(memIdx);
+
 	}
-
-
 
 	return true;
 }
@@ -421,7 +521,7 @@ Relation* DatabaseEngine::tableScan(string &tableName, vector<string> &selectLis
 	return outRelation_ptr;
 }
 
-Relation* DatabaseEngine::execSelectQuery(Node *root)
+Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 {
 	vector<string> selectList;
 	vector<string> tableList;
@@ -460,7 +560,6 @@ Relation* DatabaseEngine::execSelectQuery(Node *root)
 		finalTempRel = tableScan(tableList[0],selectList,whereString);
 		if(finalTempRel == NULL)
 			return NULL;
-		log(finalTempRel);
 	}
 	else
 	{
@@ -468,6 +567,9 @@ Relation* DatabaseEngine::execSelectQuery(Node *root)
 		log("Multitable Select to be implemeneted");
 		return NULL;
 	}
+
+	if(doLog)
+		log(finalTempRel);
 
 	return finalTempRel;
 
@@ -609,7 +711,7 @@ void DatabaseEngine::execQuery(string query)
     		returnCode = execDeleteQuery(root) ? "SUCCESS" : "FAILED";
     	break;
     	case NODE_TYPE::SELECT_QUERY:
-    		rel = execSelectQuery(root);
+    		rel = execSelectQuery(root, true);
     		returnCode = (rel==NULL)?"FAILED":"SUCCESS";
     		cleanUp(rel);
     	break;
