@@ -37,7 +37,8 @@ private:
 	bool execDropQuery(Node *root);
 	bool execInsertQuery(Node *root);
 	bool execDeleteQuery(Node *root);
-	bool execSelectQuery(Node *root);
+	Relation* execSelectQuery(Node *root);
+	void cleanUp(Relation* tempRelation);
 
 	// returns the pointer of temporary relation
 	Relation* tableScan(string &tableName, vector<string> &selectList, string whereCond);

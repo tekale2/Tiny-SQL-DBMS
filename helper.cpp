@@ -47,6 +47,16 @@ bool hasNode(enum NODE_TYPE nodeType, Node *root)
 	return found;
 }
 
+// gets and returns the column name of the orderby column
+string getOrdeByColumnName(Node *root)
+{
+	int i = 0;
+	for( i = 0;i<root->children.size();i++)
+		if(root->children[i]->nodeType == NODE_TYPE::ORDER)
+			break;
+	return root->children[i+2]->nodeVal;
+
+}
 // searches and returns the value of first instance of specified NodeType
 string getNodeVal(enum NODE_TYPE nodeType, Node *root)
 {

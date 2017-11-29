@@ -18,61 +18,6 @@ INSERT INTO course (sid, homework, project, exam, grade) VALUES (12, 0, 70, 58, 
 INSERT INTO course (sid, homework, project, exam, grade) VALUES (13, 0, 50, 77, "C")
 INSERT INTO course (sid, homework, project, exam, grade) VALUES (14, 50, 50, 56, "D")
 INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (16, 0, 0, 0, "E")
-INSERT INTO course (sid, homework, project, exam, grade) VALUES (17, 100, 100, 100, "A")
 SELECT * FROM course
-SELECT sid, grade FROM course
+SELECT sid, grade FROM course ORDER BY exam
 SELECT sid, course.grade FROM course
-SELECT DISTINCT grade FROM course
-SELECT DISTINCT * FROM course
-SELECT * FROM course ORDER BY exam
-SELECT * FROM course WHERE exam = 100
-SELECT * FROM course WHERE grade = "A"
-SELECT * FROM course WHERE exam = 100 AND project = 100
-SELECT * FROM course WHERE exam = 100 OR exam = 99
-SELECT * FROM course WHERE exam > 0
-SELECT * FROM course WHERE exam > 70
-SELECT * FROM course WHERE exam = 100 OR homework = 100 AND project = 100
-SELECT * FROM course WHERE ( exam = 100 OR homework = 100 ) AND project = 100
-SELECT * FROM course WHERE exam + homework = 200
-SELECT * FROM course WHERE ( exam * 30 + homework * 20 + project * 50 ) = 100 * 100
-SELECT * FROM course WHERE grade = "C" AND ( exam > 70 OR project > 70 ) AND ( exam * 30 + homework * 20 + project * 50 ) > 60 * 100

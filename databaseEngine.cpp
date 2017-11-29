@@ -66,7 +66,10 @@ static void tupleToMap(Schema &schema, Tuple &tuple, unordered_map<string, Field
 	}
 	return;
 }
+
 /*--------------Private Class Functions-------------*/
+
+// Main physical create query executor
 bool DatabaseEngine::execCreateQuery(Node *root)
 {
 	string table_name;
@@ -84,6 +87,7 @@ bool DatabaseEngine::execCreateQuery(Node *root)
 	return true;
 }
 
+// Main physical drop query executor
 bool DatabaseEngine::execDropQuery(Node *root)
 {
 	string table_name;
@@ -92,6 +96,7 @@ bool DatabaseEngine::execDropQuery(Node *root)
 	return true;
 }
 
+// Main physical insert query executor
 bool DatabaseEngine::execInsertQuery(Node *root)
 {
 	string table_name;
@@ -165,6 +170,7 @@ bool DatabaseEngine::execInsertQuery(Node *root)
 	return true;
 }
 
+// Main physical delete query executor
 bool DatabaseEngine::execDeleteQuery(Node *root)
 {
 	unordered_map<string,enum FIELD_TYPE> colType;
@@ -240,6 +246,8 @@ bool DatabaseEngine::execDeleteQuery(Node *root)
 	return true;
 }
 
+// Exectues select statement for single table. Output is stored in memory if small
+// Or else the output is stored as temp relation on the disk
 
 Relation* DatabaseEngine::tableScan(string &tableName, vector<string> &selectList, string whereCond)
 {
@@ -277,6 +285,13 @@ Relation* DatabaseEngine::tableScan(string &tableName, vector<string> &selectLis
 	}
 	else
 	{
+		// remove "." from the column names
+		for(int i = 0; i<selectList.size();i++)
+		{
+			size_t pos = selectList[i].find(".");
+			if(pos != string::npos)
+				selectList[i] = selectList[i].substr(pos+1);
+		}
 
 		for(int i = 0; i<field_names.size();i++)
 		{
@@ -406,18 +421,30 @@ Relation* DatabaseEngine::tableScan(string &tableName, vector<string> &selectLis
 	return outRelation_ptr;
 }
 
-bool DatabaseEngine::execSelectQuery(Node *root)
+Relation* DatabaseEngine::execSelectQuery(Node *root)
 {
 	vector<string> selectList;
 	vector<string> tableList;
 	string whereString;
-	Relation *tempRel;
+	string orderByColumn;
+	bool hasDistinct, hasOrderBy;
+	Relation *finalTempRel;
+	
+
+	hasDistinct = hasNode(NODE_TYPE::DISTINCT,root);
+	hasOrderBy  = hasNode(NODE_TYPE::ORDER,root);
+	if(hasOrderBy)
+		orderByColumn = getOrdeByColumnName(root);
 	
 	// get select list
 	if(hasNode(NODE_TYPE::STAR,root))
 		selectList.push_back("*");
 	else
+	{
 		selectList = getNodeTypeLists(NODE_TYPE::SELECT_SUBLIST, root);
+		if(hasOrderBy)
+			selectList.push_back(orderByColumn);
+	}
 	
 	
 	// get table list
@@ -430,27 +457,33 @@ bool DatabaseEngine::execSelectQuery(Node *root)
 
 	if(tableList.size()== 1)
 	{
-		tempRel = tableScan(tableList[0],selectList,whereString);
-		if(tempRel == NULL)
-			return false;
-		log(tempRel);
-		schema_manager.deleteRelation(tempRel->getRelationName());
+		finalTempRel = tableScan(tableList[0],selectList,whereString);
+		if(finalTempRel == NULL)
+			return NULL;
+		log(finalTempRel);
 	}
 	else
 	{
 		// TODO: implemenet multitbale select
 		log("Multitable Select to be implemeneted");
-		return false;
+		return NULL;
 	}
 
-	// release any used memblocks
-	buffer_manager.releaseBulkIdx(memoryBlockIndices);
-	memoryBlockIndices.clear();
-	buffer_manager.sort();
-	return true;
+	return finalTempRel;
 
 }
 
+// Called after select query is executed
+void DatabaseEngine::cleanUp(Relation* tempRelation)
+{
+	
+	if(tempRelation!=NULL)
+		schema_manager.deleteRelation(tempRelation->getRelationName());
+	buffer_manager.releaseBulkIdx(memoryBlockIndices);
+	memoryBlockIndices.clear();
+	buffer_manager.sort();
+	return;	
+}
 /*--------------Public Class Functions-------------*/
 
 // Constructor to initilaize the databaseEngine with a memory and a disk
@@ -474,7 +507,7 @@ void DatabaseEngine::log(Schema *schema)
 	field_names = schema->getFieldNames();
 
 	for(string &str:field_names)
-		cout<<str<<"\t";
+		cout<<str<<" ";
 	cout<<endl;
 }
 
@@ -539,7 +572,7 @@ void DatabaseEngine::execQuery(string query)
 	Node *root;
 	enum NODE_TYPE nodeType;
 	string returnCode = "FAILED";
-	
+	Relation* rel;
 	// parse the query and create a parse tree
 
 	root = parseQuery(query);
@@ -576,9 +609,12 @@ void DatabaseEngine::execQuery(string query)
     		returnCode = execDeleteQuery(root) ? "SUCCESS" : "FAILED";
     	break;
     	case NODE_TYPE::SELECT_QUERY:
-    		returnCode = execSelectQuery(root) ? "SUCCESS" : "FAILED";
+    		rel = execSelectQuery(root);
+    		returnCode = (rel==NULL)?"FAILED":"SUCCESS";
+    		cleanUp(rel);
     	break;
     	default:
+    		returnCode = "FAILED";
     	break;
     }
 

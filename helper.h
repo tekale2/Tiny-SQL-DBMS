@@ -21,4 +21,7 @@ void getAttributeTypeList(Node *root, vector<string>& field_names, vector<enum F
 // Returns a vector of values for multiple instances of specified node type in the right order
 vector<string> getNodeTypeLists(enum NODE_TYPE nodeType, Node *root);
 
+// gets and returns the column name of the orderby column
+string getOrdeByColumnName(Node *root);
+
 #endif

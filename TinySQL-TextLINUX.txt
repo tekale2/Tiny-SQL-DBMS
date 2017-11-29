@@ -92,7 +92,6 @@ SELECT * FROM course WHERE ( exam = 100 OR homework = 100 ) AND project = 100
 SELECT * FROM course WHERE exam + homework = 200
 SELECT * FROM course WHERE ( exam * 30 + homework * 20 + project * 50 ) = 100 * 100
 SELECT * FROM course WHERE grade = "C" AND ( exam > 70 OR project > 70 ) AND ( exam * 30 + homework * 20 + project * 50 ) > 60 * 100
-QUIT
 CREATE TABLE course2 (sid INT, exam INT, grade STR20)
 INSERT INTO course2 (sid, exam, grade) VALUES (1, 100, "A")
 INSERT INTO course2 (sid, exam, grade) VALUES (16, 25, "E")
