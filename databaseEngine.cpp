@@ -4,6 +4,31 @@
 
 using namespace std;
 
+/*--------------Structure to support one Pass Sorting----*/
+
+struct TupleCmp
+{
+	private:
+		enum FIELD_TYPE field_type;
+		string columnName;
+	public:
+		TupleCmp(enum FIELD_TYPE f, string cname):field_type(f),columnName(cname)
+		{}
+		bool operator ()(const Tuple &t1, const Tuple &t2)
+		{
+			bool result = false;
+			if(field_type == FIELD_TYPE::INT)
+				result = t1.getField(columnName).integer < t2.getField(columnName).integer;
+			else
+				result = *(t1.getField(columnName).str) < *(t2.getField(columnName).str);
+			return result;
+
+		}
+};
+
+/*--------------Structure to support 2 pass Sort Heap ------*/
+
+
 /*--------------Private Functions-------------------*/
 
 // Appends a tuple to the end of a relation (taken from TestStorageManager.cpp)
@@ -31,11 +56,22 @@ static void appendTupleToRelation(Relation* relation_ptr, MainMemory *mem, int m
   }  
 }
 
+// Compares the fields of 2 schemas
 static bool cmpFields(Schema s1, Schema s2)
 {
 	vector<enum FIELD_TYPE> f1 = s1.getFieldTypes();
 	vector<enum FIELD_TYPE> f2 = s2.getFieldTypes();
 	return f1 == f2;
+}
+
+// Performs onepass sort in main memory
+static void onePassSort(MainMemory *mem, vector<int> &memBlockIndices, string &colName, enum FIELD_TYPE field_type)
+{
+	vector<Tuple> tuples;
+	tuples = mem->getTuples(memBlockIndices[0],memBlockIndices.size());
+	sort(tuples.begin(),tuples.end(),TupleCmp(field_type,colName));
+	mem->setTuples(memBlockIndices[0],tuples);
+	return;
 }
 
 // Appends a tuple to the end of a memory block (taken from TestStorageManager.cpp)
@@ -250,7 +286,8 @@ bool DatabaseEngine::execInsertQuery(Node *root)
 		}
 		
 		// clean up select result
-		cleanUp(outputRel);
+		tempRelations.push_back(outputRel);
+		cleanUp();
 
 		//get a free mem block and append
 		memIdx = buffer_manager.getFreeBlockIdx();
@@ -557,9 +594,18 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 
 	if(tableList.size()== 1)
 	{
+		if(hasOrderBy)
+		{
+			size_t pos = orderByColumn.find(".");
+			if(pos != string::npos)
+				orderByColumn = orderByColumn.substr(pos+1);
+		}
+
 		finalTempRel = tableScan(tableList[0],selectList,whereString);
 		if(finalTempRel == NULL)
 			return NULL;
+
+		tempRelations.push_back(finalTempRel);
 	}
 	else
 	{
@@ -568,39 +614,92 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 		return NULL;
 	}
 
+	if(hasOrderBy)
+		finalTempRel = execOrderBy(finalTempRel,orderByColumn);
 	if(doLog)
 		log(finalTempRel);
-
+	
 	return finalTempRel;
 
 }
 
-// Called after select query is executed
-void DatabaseEngine::cleanUp(Relation* tempRelation)
+
+// Main orderby function
+Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
 {
-	
-	if(tempRelation!=NULL)
-		schema_manager.deleteRelation(tempRelation->getRelationName());
+	int numBlocks, numMemBlocks;
+	vector<string> field_names;
+	vector<enum FIELD_TYPE> field_types;
+	enum FIELD_TYPE field_type;
+	Relation *returnRel;
+	Schema schema = rel->getSchema();
+	field_names = schema.getFieldNames();
+	field_types = schema.getFieldTypes();
+
+	numBlocks = rel->getNumOfBlocks();
+	numMemBlocks = buffer_manager.getFreeBlocksCount();
+	cout<<"Actual MemBlocks: "<< mem->getMemorySize()<<endl;
+	cout<<"Free blocks: "<<numMemBlocks<<endl;
+	for(int i = 0; i<field_names.size();i++ )
+	{
+		if(field_names[i] == colName)
+		{
+			field_type = field_types[i];
+			break;
+		}
+	}
+	if(resultInMemory)
+	{
+		// direct one pass
+		onePassSort(mem, memoryBlockIndices, colName,field_type);
+		returnRel = rel;
+	}
+	else if(numBlocks <= numMemBlocks)
+	{
+		// Not in memory so load it in memory and call one pass sort
+		resultInMemory = true;
+
+		// load all blocks in memory
+		for(int i = 0;i<numBlocks;i++)
+		{
+			int freeMemIdx = buffer_manager.getFreeBlockIdx();
+			rel->getBlock(i,freeMemIdx);
+			memoryBlockIndices.push_back(freeMemIdx);
+
+		}
+		onePassSort(mem, memoryBlockIndices, colName,field_type);
+		returnRel = rel;
+
+	}
+	else if((numMemBlocks*numMemBlocks) > numBlocks)
+	{
+		// TODO: Implement 2 pass
+		return NULL;
+	}
+	else
+	{
+		log("Cannot perform 2 pass sort as numBlocks in realtion is greater than total memory");
+		return NULL;
+	}
+
+	return returnRel;
+}
+
+
+// Called after select query is executed
+void DatabaseEngine::cleanUp()
+{
+	for(Relation *tempRelation: tempRelations)
+		if(tempRelation!=NULL)
+			schema_manager.deleteRelation(tempRelation->getRelationName());
+	tempRelations.clear();
 	buffer_manager.releaseBulkIdx(memoryBlockIndices);
 	memoryBlockIndices.clear();
 	buffer_manager.sort();
 	return;	
 }
-/*--------------Public Class Functions-------------*/
 
-// Constructor to initilaize the databaseEngine with a memory and a disk
-// This in turn initializes schema manager and buffer manager
-DatabaseEngine::DatabaseEngine(MainMemory *mem, Disk *disk):schema_manager(mem,disk), buffer_manager(mem)
-{
-	this->mem = mem;
-	this->disk = disk;
-	resultInMemory = true;
-	memoryBlockIndices.clear();
-}
-
-
- 
-// logger function to log output to std out
+// logger functions to log output to std out
 // TODO: log to a file after all queries are implemented
 
 void DatabaseEngine::log(Schema *schema)
@@ -632,13 +731,10 @@ void DatabaseEngine::log(Relation *relation_ptr)
 
 	if(resultInMemory)
 	{
-		for(int i:memoryBlockIndices)
-		{
-			memBlockPtr = mem->getBlock(i);
-			tuples = memBlockPtr->getTuples();
-			for(Tuple &t: tuples)
-				log(t);
-		}
+
+		tuples = mem->getTuples(memoryBlockIndices[0],memoryBlockIndices.size());	
+		for(Tuple &t: tuples)
+			log(t);
 	}
 	else
 	{
@@ -660,11 +756,26 @@ void DatabaseEngine::log(Relation *relation_ptr)
 	}
 
 }
+
 void DatabaseEngine::log(string value)
 {
 	cout<<value<<endl;
 	return;
 }
+
+
+/*--------------Public Class Functions-------------*/
+
+// Constructor to initilaize the databaseEngine with a memory and a disk
+// This in turn initializes schema manager and buffer manager
+DatabaseEngine::DatabaseEngine(MainMemory *mem, Disk *disk):schema_manager(mem,disk), buffer_manager(mem)
+{
+	this->mem = mem;
+	this->disk = disk;
+	resultInMemory = true;
+	memoryBlockIndices.clear();
+}
+
 
 // the main functions which takens in raw query as input
 // returns"SUCCESS" for successful query execution
@@ -713,7 +824,7 @@ void DatabaseEngine::execQuery(string query)
     	case NODE_TYPE::SELECT_QUERY:
     		rel = execSelectQuery(root, true);
     		returnCode = (rel==NULL)?"FAILED":"SUCCESS";
-    		cleanUp(rel);
+    		cleanUp();
     	break;
     	default:
     		returnCode = "FAILED";

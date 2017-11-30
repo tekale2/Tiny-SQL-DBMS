@@ -29,20 +29,22 @@ private:
 	SchemaManager schema_manager;
 	BufferManager buffer_manager;
 
-	// for holding the state for tableScan
+	// for holding the state for selectStatement
 	vector<int> memoryBlockIndices;
 	bool resultInMemory;
+	vector<Relation*> tempRelations;
 
 	bool execCreateQuery(Node *root);
 	bool execDropQuery(Node *root);
 	bool execInsertQuery(Node *root);
 	bool execDeleteQuery(Node *root);
 	Relation* execSelectQuery(Node *root, bool doLog);
-	void cleanUp(Relation* tempRelation);
+	Relation* execOrderBy(Relation *rel, string colName);
+	void cleanUp();
 
 	// returns the pointer of temporary relation
 	Relation* tableScan(string &tableName, vector<string> &selectList, string whereCond);
-	// logger function to log output
+	// logger functions to log output
 	void log(Relation *relation_ptr);
 	void log(Schema *schema);
 	void log(Tuple &tuple);
