@@ -1,7 +1,152 @@
 #include "helper.h"
 #include <queue>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
+
+/*------------------------PQP Algorithm functions----------------------------*/
+
+/*--------------Structure to support one Pass Sorting----*/
+
+struct TupleCmp
+{
+	private:
+		enum FIELD_TYPE field_type;
+		string columnName;
+	public:
+		TupleCmp(enum FIELD_TYPE f, string cname):field_type(f),columnName(cname)
+		{}
+		bool operator ()(const Tuple &t1, const Tuple &t2)
+		{
+			bool result = false;
+			if(field_type == FIELD_TYPE::INT)
+				result = t1.getField(columnName).integer < t2.getField(columnName).integer;
+			else
+				result = *(t1.getField(columnName).str) < *(t2.getField(columnName).str);
+			return result;
+
+		}
+};
+
+/*--------------Structure to support 2 pass Sort Heap ------*/
+
+
+static bool tuplesEqual(Tuple &t1, Tuple &t2)
+{
+	Schema schema = t1.getSchema();
+	vector<enum FIELD_TYPE> field_types = schema.getFieldTypes();
+	for(int i = 0; i<field_types.size();i++)
+	{
+		if(field_types[i] == FIELD_TYPE::INT)
+		{
+			if(t1.getField(i).integer != t2.getField(i).integer)
+				return false;
+		}
+		else
+		{
+
+			if(*(t1.getField(i).str) != *(t2.getField(i).str))
+				return false;
+		}
+	}
+	return true;
+}
+
+// Appends a tuple to the end of a memory block (taken from TestStorageManager.cpp)
+// using memory block "memory_block_index" as destination buffer
+bool appendTupleToMemory(MainMemory *mem, int memory_block_index, Tuple& tuple) 
+{
+	Block* block_ptr;
+	block_ptr = mem->getBlock(memory_block_index);
+	if(block_ptr->isFull())
+		return false;
+	block_ptr->appendTuple(tuple);
+	return true;
+}
+
+
+// Appends a tuple to the end of a relation (taken from TestStorageManager.cpp)
+// using memory block "memory_block_index" as output buffer
+void appendTupleToRelation(Relation* relation_ptr, MainMemory *mem, int memory_block_index, Tuple& tuple) 
+{
+  Block* block_ptr;
+  if (relation_ptr->getNumOfBlocks()==0) {
+    block_ptr=mem->getBlock(memory_block_index);
+    block_ptr->clear(); //clear the block
+    block_ptr->appendTuple(tuple); // append the tuple
+    relation_ptr->setBlock(relation_ptr->getNumOfBlocks(),memory_block_index);
+  } else {
+    relation_ptr->getBlock(relation_ptr->getNumOfBlocks()-1,memory_block_index);
+    block_ptr=mem->getBlock(memory_block_index);
+
+    if (block_ptr->isFull()) {
+      block_ptr->clear(); //clear the block
+      block_ptr->appendTuple(tuple); // append the tuple
+      relation_ptr->setBlock(relation_ptr->getNumOfBlocks(),memory_block_index); //write back to the relation
+    } else {
+      block_ptr->appendTuple(tuple); // append the tuple
+      relation_ptr->setBlock(relation_ptr->getNumOfBlocks()-1,memory_block_index); //write back to the relation
+    }
+  }  
+}
+// Performs onepass sort in main memory
+void onePassSort(MainMemory *mem, vector<int> &memBlockIndices, string &colName, enum FIELD_TYPE field_type)
+{
+	vector<Tuple> tuples;
+	tuples = mem->getTuples(memBlockIndices[0],memBlockIndices.size());
+	sort(tuples.begin(),tuples.end(),TupleCmp(field_type,colName));
+	mem->setTuples(memBlockIndices[0],tuples);
+	return;
+}
+
+
+// Performs duplicate elmination in memory
+void onePassRemoveDups(MainMemory *mem,vector<int> &memBlockIndices, BufferManager &buffer_manager,\
+	string &colName,enum FIELD_TYPE field_type)
+{
+	// get tuples and sort
+	vector<Tuple> tuples, output;
+	int i = 0;
+	int freeMemIdx;
+	tuples = mem->getTuples(memBlockIndices[0],memBlockIndices.size());
+	sort(tuples.begin(),tuples.end(),TupleCmp(field_type,colName));	
+
+	// remove duplicates from vector:
+    for(int j = 1;j<tuples.size();j++)
+    {
+        if(!tuplesEqual(tuples[i],tuples[j]))
+        {
+            i++;
+            tuples[i]  = tuples[j];
+        }
+    }
+    for(int j =0;j<=(i);j++)
+    {
+    	output.push_back(tuples[j]);
+    }
+    
+    // reload the tuples into memory
+    buffer_manager.releaseBulkIdx(memBlockIndices);
+	memBlockIndices.clear();
+	buffer_manager.sort();
+
+	freeMemIdx = buffer_manager.getFreeBlockIdx();
+	memBlockIndices.push_back(freeMemIdx);
+	for(Tuple &t:output)
+	{
+		if (!appendTupleToMemory(mem, freeMemIdx,t))
+		{
+				freeMemIdx = buffer_manager.getFreeBlockIdx();
+				memBlockIndices.push_back(freeMemIdx);
+				appendTupleToMemory(mem, freeMemIdx,t);
+		}
+	}
+
+	return;
+}
+
+/*-----------------------LQP Helper functions----------------------------------*/
 /* returns pointer to the required Node Type
  returns Null if not found*/
 Node* getNode(enum NODE_TYPE nodeType, Node *root)

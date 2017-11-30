@@ -4,57 +4,7 @@
 
 using namespace std;
 
-/*--------------Structure to support one Pass Sorting----*/
-
-struct TupleCmp
-{
-	private:
-		enum FIELD_TYPE field_type;
-		string columnName;
-	public:
-		TupleCmp(enum FIELD_TYPE f, string cname):field_type(f),columnName(cname)
-		{}
-		bool operator ()(const Tuple &t1, const Tuple &t2)
-		{
-			bool result = false;
-			if(field_type == FIELD_TYPE::INT)
-				result = t1.getField(columnName).integer < t2.getField(columnName).integer;
-			else
-				result = *(t1.getField(columnName).str) < *(t2.getField(columnName).str);
-			return result;
-
-		}
-};
-
-/*--------------Structure to support 2 pass Sort Heap ------*/
-
-
 /*--------------Private Functions-------------------*/
-
-// Appends a tuple to the end of a relation (taken from TestStorageManager.cpp)
-// using memory block "memory_block_index" as output buffer
-static void appendTupleToRelation(Relation* relation_ptr, MainMemory *mem, int memory_block_index, Tuple& tuple) 
-{
-  Block* block_ptr;
-  if (relation_ptr->getNumOfBlocks()==0) {
-    block_ptr=mem->getBlock(memory_block_index);
-    block_ptr->clear(); //clear the block
-    block_ptr->appendTuple(tuple); // append the tuple
-    relation_ptr->setBlock(relation_ptr->getNumOfBlocks(),memory_block_index);
-  } else {
-    relation_ptr->getBlock(relation_ptr->getNumOfBlocks()-1,memory_block_index);
-    block_ptr=mem->getBlock(memory_block_index);
-
-    if (block_ptr->isFull()) {
-      block_ptr->clear(); //clear the block
-      block_ptr->appendTuple(tuple); // append the tuple
-      relation_ptr->setBlock(relation_ptr->getNumOfBlocks(),memory_block_index); //write back to the relation
-    } else {
-      block_ptr->appendTuple(tuple); // append the tuple
-      relation_ptr->setBlock(relation_ptr->getNumOfBlocks()-1,memory_block_index); //write back to the relation
-    }
-  }  
-}
 
 // Compares the fields of 2 schemas
 static bool cmpFields(Schema s1, Schema s2)
@@ -62,28 +12,6 @@ static bool cmpFields(Schema s1, Schema s2)
 	vector<enum FIELD_TYPE> f1 = s1.getFieldTypes();
 	vector<enum FIELD_TYPE> f2 = s2.getFieldTypes();
 	return f1 == f2;
-}
-
-// Performs onepass sort in main memory
-static void onePassSort(MainMemory *mem, vector<int> &memBlockIndices, string &colName, enum FIELD_TYPE field_type)
-{
-	vector<Tuple> tuples;
-	tuples = mem->getTuples(memBlockIndices[0],memBlockIndices.size());
-	sort(tuples.begin(),tuples.end(),TupleCmp(field_type,colName));
-	mem->setTuples(memBlockIndices[0],tuples);
-	return;
-}
-
-// Appends a tuple to the end of a memory block (taken from TestStorageManager.cpp)
-// using memory block "memory_block_index" as destination buffer
-static bool appendTupleToMemory(MainMemory *mem, int memory_block_index, Tuple& tuple) 
-{
-	Block* block_ptr;
-	block_ptr = mem->getBlock(memory_block_index);
-	if(block_ptr->isFull())
-		return false;
-	block_ptr->appendTuple(tuple);
-	return true;
 }
 
 // Converts a given schema to a map
@@ -614,8 +542,16 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 		return NULL;
 	}
 
-	if(hasOrderBy)
+	if(hasOrderBy && hasDistinct)
+		finalTempRel = execDistinct(finalTempRel,orderByColumn);
+	else if(hasOrderBy)
 		finalTempRel = execOrderBy(finalTempRel,orderByColumn);
+	else if(hasDistinct)
+	{
+		Schema sch= finalTempRel->getSchema();
+		finalTempRel = execDistinct(finalTempRel,sch.getFieldNames()[0]);
+	}
+
 	if(doLog)
 		log(finalTempRel);
 	
@@ -671,7 +607,7 @@ Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
 		returnRel = rel;
 
 	}
-	else if((numMemBlocks*numMemBlocks) > numBlocks)
+	else if(((numMemBlocks-1)*numMemBlocks) > numBlocks)
 	{
 		// TODO: Implement 2 pass
 		return NULL;
@@ -685,7 +621,66 @@ Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
 	return returnRel;
 }
 
+// Main Distinct function
+Relation* DatabaseEngine::execDistinct(Relation *rel, string colName)
+{
+	int numBlocks, numMemBlocks;
+	vector<string> field_names;
+	vector<enum FIELD_TYPE> field_types;
+	enum FIELD_TYPE field_type;
+	Relation *returnRel;
+	Schema schema = rel->getSchema();
+	field_names = schema.getFieldNames();
+	field_types = schema.getFieldTypes();
 
+	numBlocks = rel->getNumOfBlocks();
+	numMemBlocks = buffer_manager.getFreeBlocksCount();
+	cout<<"Actual MemBlocks: "<< mem->getMemorySize()<<endl;
+	cout<<"Free blocks: "<<numMemBlocks<<endl;
+	for(int i = 0; i<field_names.size();i++ )
+	{
+		if(field_names[i] == colName)
+		{
+			field_type = field_types[i];
+			break;
+		}
+	}
+	if(resultInMemory)
+	{
+		// direct one pass
+		onePassRemoveDups(mem,memoryBlockIndices,buffer_manager,colName,field_type);
+		returnRel = rel;
+	}
+	else if(numBlocks <= numMemBlocks)
+	{
+		// Not in memory so load it in memory and call one pass sort
+		resultInMemory = true;
+
+		// load all blocks in memory
+		for(int i = 0;i<numBlocks;i++)
+		{
+			int freeMemIdx = buffer_manager.getFreeBlockIdx();
+			rel->getBlock(i,freeMemIdx);
+			memoryBlockIndices.push_back(freeMemIdx);
+
+		}
+		onePassRemoveDups(mem,memoryBlockIndices,buffer_manager,colName,field_type);
+		returnRel = rel;
+
+	}
+	else if(((numMemBlocks-1)*numMemBlocks) > numBlocks)
+	{
+		// TODO: Implement 2 pass
+		return NULL;
+	}
+	else
+	{
+		log("Cannot perform 2 pass distcint as numBlocks in realtion is greater than total memory");
+		return NULL;
+	}
+
+	return returnRel;
+}
 // Called after select query is executed
 void DatabaseEngine::cleanUp()
 {

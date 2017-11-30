@@ -40,6 +40,7 @@ private:
 	bool execDeleteQuery(Node *root);
 	Relation* execSelectQuery(Node *root, bool doLog);
 	Relation* execOrderBy(Relation *rel, string colName);
+	Relation* execDistinct(Relation *rel, string colName);
 	void cleanUp();
 
 	// returns the pointer of temporary relation
