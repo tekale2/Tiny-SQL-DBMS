@@ -32,9 +32,12 @@ public:
 	// sort the indices in increasing order
 	void sort();
 	
-	// store back the memory block index
+	// store back the memory block index into freeList
 	void storeFreeBlockIdx(int idx);
 
+	// Returns the indices all the avilable free mem blocks
+	void getAllFreeBlocks(vector<int> &indices);
+	
 	// release list of blocks
 	void releaseBulkIdx(vector<int> &indices);
 	

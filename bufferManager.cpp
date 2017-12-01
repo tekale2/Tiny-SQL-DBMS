@@ -44,6 +44,21 @@ void BufferManager::sort()
 	return;
 }
 
+//get all free indices in bulk
+void BufferManager::getAllFreeBlocks(vector<int> &indices)
+{
+	Block *temp;
+	indices = freeblockList;
+	reverse(indices.begin(),indices.end());
+	for(int i:indices)
+	{
+		temp = mem->getBlock(i);
+		temp->clear();
+	}
+	freeblockList.clear();
+	return;
+}
+
 // release list of blocks
 void BufferManager::releaseBulkIdx(vector<int> &indices)
 {

@@ -439,14 +439,13 @@ Relation* DatabaseEngine::tableScan(string &tableName, vector<string> &selectLis
 		}
 
 		// Step 2 insert the extracted/projected tuples into mem/relation
-		if(!resultInMemory)
+		for(Tuple &t:outputTuples)
 		{
-			for(Tuple &t:outputTuples)
+			if(!resultInMemory)
+			{
 				appendTupleToRelation(outRelation_ptr, mem, currIdx, t);
-		}
-		else
-		{
-			for(Tuple &t:outputTuples)
+			}
+			else
 			{
 				if(!appendTupleToMemory(mem, currIdx, t))
 				{
@@ -564,10 +563,11 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
 {
 	int numBlocks, numMemBlocks;
+	string tempName, finalname;
 	vector<string> field_names;
 	vector<enum FIELD_TYPE> field_types;
 	enum FIELD_TYPE field_type;
-	Relation *returnRel;
+	Relation *returnRel, *tempRel;
 	Schema schema = rel->getSchema();
 	field_names = schema.getFieldNames();
 	field_types = schema.getFieldTypes();
@@ -609,8 +609,13 @@ Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
 	}
 	else if(((numMemBlocks-1)*numMemBlocks) > numBlocks)
 	{
-		// TODO: Implement 2 pass
-		return NULL;
+		finalname = rel->getRelationName() + "_Sorted_Output";
+		returnRel = schema_manager.createRelation(finalname,schema);
+		tempName = rel->getRelationName() + "_Sorted_temporary_out";
+		tempRel = schema_manager.createRelation(tempName,schema);
+		twoPassSort(rel, tempRel, returnRel, mem, buffer_manager,colName,field_type);
+		tempRelations.push_back(returnRel);
+		tempRelations.push_back(tempRel);
 	}
 	else
 	{

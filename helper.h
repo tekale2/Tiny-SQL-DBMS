@@ -1,5 +1,8 @@
 #ifndef _HELPER_H
 #define _HELPER_H
+
+#include <vector>
+#include <string>
 #include "parser.h"
 #include "./StorageManager/Block.h"
 #include "./StorageManager/Config.h"
@@ -24,6 +27,10 @@ void appendTupleToRelation(Relation* relation_ptr, MainMemory *mem, int memory_b
 
 // Performs onepass sort in memory
 void onePassSort(MainMemory *mem, vector<int> &memBlockIndices, string &colName, enum FIELD_TYPE field_type);
+
+// Performs two pass sort
+void twoPassSort(Relation *rel, Relation *temp, Relation *output, MainMemory *mem, BufferManager &buffer_manager,\
+	string &colName,enum FIELD_TYPE field_type);
 
 // Performs duplicate elmination in memory
 void onePassRemoveDups(MainMemory *mem,vector<int> &memBlockIndices, BufferManager &buffer_manager,\
