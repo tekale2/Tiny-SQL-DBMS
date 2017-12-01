@@ -498,18 +498,14 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 	hasDistinct = hasNode(NODE_TYPE::DISTINCT,root);
 	hasOrderBy  = hasNode(NODE_TYPE::ORDER,root);
 	if(hasOrderBy)
-		orderByColumn = getOrdeByColumnName(root);
+		orderByColumn = getOrderByColumnName(root);
 	
 	// get select list
 	if(hasNode(NODE_TYPE::STAR,root))
 		selectList.push_back("*");
 	else
-	{
 		selectList = getNodeTypeLists(NODE_TYPE::SELECT_SUBLIST, root);
-		if(hasOrderBy)
-			selectList.push_back(orderByColumn);
-	}
-	
+		
 	
 	// get table list
 	tableList = getNodeTypeLists(NODE_TYPE::TABLE_LIST, root);
@@ -526,6 +522,9 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 			size_t pos = orderByColumn.find(".");
 			if(pos != string::npos)
 				orderByColumn = orderByColumn.substr(pos+1);
+
+			if(count(selectList.begin(),selectList.end(),orderByColumn) == 0)
+				selectList.push_back(orderByColumn);
 		}
 
 		finalTempRel = tableScan(tableList[0],selectList,whereString);
@@ -537,6 +536,8 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 	else
 	{
 		// TODO: implemenet multitbale select
+		if(count(selectList.begin(),selectList.end(),orderByColumn) == 0)
+			selectList.push_back(orderByColumn);
 		log("Multitable Select to be implemeneted");
 		return NULL;
 	}
@@ -633,7 +634,8 @@ Relation* DatabaseEngine::execDistinct(Relation *rel, string colName)
 	vector<string> field_names;
 	vector<enum FIELD_TYPE> field_types;
 	enum FIELD_TYPE field_type;
-	Relation *returnRel;
+	Relation *returnRel, *tempRel;
+	string tempName, finalname;
 	Schema schema = rel->getSchema();
 	field_names = schema.getFieldNames();
 	field_types = schema.getFieldTypes();
@@ -675,8 +677,13 @@ Relation* DatabaseEngine::execDistinct(Relation *rel, string colName)
 	}
 	else if(((numMemBlocks-1)*numMemBlocks) > numBlocks)
 	{
-		// TODO: Implement 2 pass
-		return NULL;
+		finalname = rel->getRelationName() + "_Distinct_Output";
+		returnRel = schema_manager.createRelation(finalname,schema);
+		tempName = rel->getRelationName() + "_distinct_temporary_out";
+		tempRel = schema_manager.createRelation(tempName,schema);
+		twoPassRemoveDups(rel, tempRel, returnRel, mem, buffer_manager,colName,field_type);
+		tempRelations.push_back(returnRel);
+		tempRelations.push_back(tempRel);
 	}
 	else
 	{

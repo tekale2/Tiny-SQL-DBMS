@@ -36,6 +36,10 @@ void twoPassSort(Relation *rel, Relation *temp, Relation *output, MainMemory *me
 void onePassRemoveDups(MainMemory *mem,vector<int> &memBlockIndices, BufferManager &buffer_manager,\
 	string &colName,enum FIELD_TYPE field_type);
 
+// Performs two pass duplicate elmination
+void twoPassRemoveDups(Relation *rel, Relation *temp, Relation *output, MainMemory *mem, BufferManager &buffer_manager,\
+	string &colName,enum FIELD_TYPE field_type);
+
 // contains helper functions for the query execution
 /* returns pointer to the required Node Type
  returns Null if not found*/
@@ -54,6 +58,6 @@ void getAttributeTypeList(Node *root, vector<string>& field_names, vector<enum F
 vector<string> getNodeTypeLists(enum NODE_TYPE nodeType, Node *root);
 
 // gets and returns the column name of the orderby column
-string getOrdeByColumnName(Node *root);
+string getOrderByColumnName(Node *root);
 
 #endif

@@ -325,6 +325,174 @@ void twoPassSort(Relation *rel, Relation *temp, Relation *output, MainMemory *me
 
 	return;
 }
+
+void twoPassRemoveDups(Relation *rel, Relation *temp, Relation *output, MainMemory *mem, BufferManager &buffer_manager,\
+	string &colName,enum FIELD_TYPE field_type)
+{
+	vector<queue<QElement>> subList;
+	priority_queue<HeapElement, vector<HeapElement>, greater<HeapElement> > minHeap;
+	QElement qElement;
+	HeapElement heapElement;
+	bool append;
+	int numBlocks, freeMemBlocks, subListSize;
+	int startDiskIdx, endDiskIdx, k, outputIdx, currDiskBlock;
+	vector<int> freeMemBlockIndices, used;
+	Block *blkPtr;
+	vector<Tuple> tuples;
+	vector<Tuple> lastInserted;
+	numBlocks = rel->getNumOfBlocks();
+	freeMemBlocks = buffer_manager.getFreeBlocksCount();
+	subListSize = (numBlocks-1)/freeMemBlocks + 1;
+	subList.resize(subListSize);
+	buffer_manager.getAllFreeBlocks(freeMemBlockIndices);
+	
+	// First Pass: sort the relations and store it back to the disk in new relation
+	for(int i = 0; i<subListSize;i++)
+	{
+		startDiskIdx = i*freeMemBlocks;
+		endDiskIdx = startDiskIdx+ freeMemBlocks -1;
+		if(endDiskIdx > (numBlocks-1))
+			endDiskIdx = numBlocks-1;
+		k =0;
+		for(int j =startDiskIdx;j<=endDiskIdx;j++)
+		{
+			rel->getBlock(j, k);
+			k++;
+		}
+		
+		used = freeMemBlockIndices;
+		used.resize((endDiskIdx - startDiskIdx + 1));
+		// perform one pass sort
+		onePassSort(mem, used, colName,field_type);
+		
+		// store back the result
+		k =0;
+		for(int j =startDiskIdx;j<=endDiskIdx;j++)
+		{
+			qElement.diskBlockIdx = j;
+			qElement.nextTupleIdx = 0;
+			blkPtr = mem->getBlock(k);
+			qElement.numTuplesInBlock = blkPtr->getNumTuples();
+			subList[i].push(qElement);
+			tuples = blkPtr->getTuples();
+			for(Tuple &t:tuples)
+				appendTupleToRelation(temp, mem, k, t);
+			k++;
+		}
+	}
+	// clear memory
+	buffer_manager.releaseBulkIdx(freeMemBlockIndices);
+	buffer_manager.sort();
+	buffer_manager.getAllFreeBlocks(freeMemBlockIndices);
+	outputIdx = freeMemBlockIndices.back();
+	freeMemBlockIndices.pop_back();
+
+	//Build heap
+	for(int i = 0; i<subListSize;i++)
+	{
+		// bring first block of each sublist to memory
+		qElement = subList[i].front();
+		temp->getBlock(qElement.diskBlockIdx, i);
+		blkPtr = mem->getBlock(i);
+		Tuple temp = blkPtr->getTuple(0);
+		
+		if(field_type == FIELD_TYPE::INT)
+			heapElement.integer = temp.getField(colName).integer;
+		else
+			heapElement.str = *(temp.getField(colName).str);
+		heapElement.tupleIdx = 0;
+		heapElement.currMemIdx = i;
+		heapElement.field_type = field_type;
+		minHeap.push(heapElement);
+		subList[i].front().nextTupleIdx = 1;
+	}
+
+	currDiskBlock = 0;
+	
+	//2nd pass store the sorted result
+	while(!minHeap.empty())
+	{
+		heapElement = minHeap.top();
+		minHeap.pop();
+		// Store the tuple into relation
+		blkPtr = mem->getBlock(heapElement.currMemIdx);
+		Tuple tuple = blkPtr->getTuple(heapElement.tupleIdx);
+		append = false;
+
+		if(lastInserted.size() == 0)
+		{
+			append = true;
+			lastInserted.push_back(tuple);
+		}
+		else if(!tuplesEqual(tuple,lastInserted[0]))
+		{
+			lastInserted[0] = tuple;
+			append = true;
+		}
+		if(append)
+		{
+			if(!appendTupleToMemory(mem, outputIdx,tuple))
+			{
+				output->setBlock(currDiskBlock,outputIdx);
+				currDiskBlock++;
+				blkPtr = mem->getBlock(outputIdx);
+				blkPtr->clear();
+				appendTupleToMemory(mem, outputIdx,tuple);
+			}
+		}
+
+		// load another tuple from the sublist
+		if(!subList[heapElement.currMemIdx].empty())
+		{
+			qElement = subList[heapElement.currMemIdx].front();
+			if(qElement.nextTupleIdx < qElement.numTuplesInBlock)
+			{
+				blkPtr = mem->getBlock(heapElement.currMemIdx);
+				Tuple temp = blkPtr->getTuple(qElement.nextTupleIdx);
+				if(field_type == FIELD_TYPE::INT)
+					heapElement.integer = temp.getField(colName).integer;
+				else
+					heapElement.str = *(temp.getField(colName).str);
+				heapElement.currMemIdx = heapElement.currMemIdx;
+				heapElement.tupleIdx = qElement.nextTupleIdx;
+				heapElement.field_type = field_type;
+				minHeap.push(heapElement);
+				qElement.nextTupleIdx++;
+				subList[heapElement.currMemIdx].front().nextTupleIdx = qElement.nextTupleIdx;
+			}
+			else
+			{
+				subList[heapElement.currMemIdx].pop();
+				if(!subList[heapElement.currMemIdx].empty())
+				{
+					qElement = subList[heapElement.currMemIdx].front();
+					// get the block in memory
+					temp->getBlock(qElement.diskBlockIdx,heapElement.currMemIdx);
+					blkPtr = mem->getBlock(heapElement.currMemIdx);
+					Tuple temp = blkPtr->getTuple(0);
+					if(field_type == FIELD_TYPE::INT)
+						heapElement.integer = temp.getField(colName).integer;
+					else
+						heapElement.str = *(temp.getField(colName).str);
+					heapElement.currMemIdx = heapElement.currMemIdx;
+					heapElement.tupleIdx = 0;
+					heapElement.field_type = field_type;
+					minHeap.push(heapElement);
+				    subList[heapElement.currMemIdx].front().nextTupleIdx = 1;
+				}
+			}
+
+		}
+	}
+	output->setBlock(currDiskBlock,outputIdx);
+
+	// clear any used memory and return
+	freeMemBlockIndices.push_back(outputIdx);
+	buffer_manager.releaseBulkIdx(freeMemBlockIndices);
+	buffer_manager.sort();
+
+	return;
+}
 /*-----------------------LQP Helper functions----------------------------------*/
 /* returns pointer to the required Node Type
  returns Null if not found*/
@@ -372,7 +540,7 @@ bool hasNode(enum NODE_TYPE nodeType, Node *root)
 }
 
 // gets and returns the column name of the orderby column
-string getOrdeByColumnName(Node *root)
+string getOrderByColumnName(Node *root)
 {
 	int i = 0;
 	for( i = 0;i<root->children.size();i++)
