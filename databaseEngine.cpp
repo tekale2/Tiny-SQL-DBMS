@@ -1,4 +1,5 @@
 #include <unordered_map>
+#include <unordered_set>
 #include <algorithm>
 #include "databaseEngine.h"
 
@@ -36,6 +37,123 @@ static void tupleToMap(Schema &schema, Tuple &tuple, unordered_map<string, Field
 		colValues[field_names[i]] = tuple.getField(field_names[i]);
 	}
 	return;
+}
+
+// Join 2 schemas
+static Schema joinSchemas(Schema &sch1, Schema &sch2, Relation *rel1, Relation *rel2)
+{
+	string rel1Name, rel2Name;
+	vector<string> field_names_1, field_names_2, field_names_out;
+	vector<enum FIELD_TYPE> field_types_1, field_types_2, field_types_out;
+	field_names_1 = sch1.getFieldNames();
+	field_names_2 = sch2.getFieldNames();
+	field_types_1 = sch1.getFieldTypes();
+	field_types_2 = sch2.getFieldTypes();
+	rel1Name = rel1->getRelationName();
+	rel2Name = rel2->getRelationName();
+	for(int i = 0;i<field_names_1.size();i++)
+	{
+		if(field_names_1[i].find(".")==string::npos)
+		{
+			field_names_1[i] = rel1Name + "."+field_names_1[i];
+		}
+	}
+	
+	for(int i = 0;i<field_names_2.size();i++)
+	{
+		if(field_names_2[i].find(".")==string::npos)
+		{
+			field_names_2[i] = rel2Name + "."+field_names_2[i];
+		}
+	}
+	field_names_out.insert(field_names_out.end(),field_names_1.begin(),field_names_1.end());
+	field_names_out.insert(field_names_out.end(),field_names_2.begin(),field_names_2.end());
+	field_types_out.insert(field_types_out.end(),field_types_1.begin(),field_types_1.end());
+	field_types_out.insert(field_types_out.end(),field_types_2.begin(),field_types_2.end());
+	Schema outputJoined(field_names_out,field_types_out);
+
+	return outputJoined;
+}
+
+// Join 2 tuples
+
+static Tuple joinTuples(Tuple &t1,Tuple &t2, Relation *outRel)
+{
+	vector<enum FIELD_TYPE> field_types;
+	int i,k;
+	i = 0;
+	k = 0;
+	Schema schema = outRel->getSchema();
+	field_types = schema.getFieldTypes();
+
+	Tuple outTuple = outRel->createTuple();
+	for(i = 0; i<t1.getNumOfFields();i++)
+	{
+		if(field_types[i] == FIELD_TYPE::INT)
+			outTuple.setField(i, t1.getField(i).integer);
+		else
+			outTuple.setField(i, *(t1.getField(i).str));
+
+	}
+	while(k<t2.getNumOfFields())
+	{
+		if(field_types[i] == FIELD_TYPE::INT)
+			outTuple.setField(i, t2.getField(k).integer);
+		else
+			outTuple.setField(i, *(t2.getField(k).str));
+		i++;
+		k++;
+	}
+	return outTuple;
+}
+
+//Project Tuple
+
+static Tuple projectTuple(Tuple &t1, Relation *rel)
+{
+	vector<enum FIELD_TYPE> field_types;
+	vector<string> field_names;
+	Schema schema = rel->getSchema();
+	field_types = schema.getFieldTypes();
+	field_names = schema.getFieldNames();
+
+	Tuple outTuple = rel->createTuple();
+	for(int j = 0;j<field_names.size();j++)
+	{
+		if(field_types[j] == FIELD_TYPE::INT)
+		{
+			int intVal = t1.getField(field_names[j]).integer;
+			outTuple.setField(field_names[j],intVal);
+		}
+		else
+		{
+			string strVal = *(t1.getField(field_names[j]).str);
+			outTuple.setField(field_names[j],strVal);
+		}
+	}
+
+	return outTuple;
+}
+//Projected Schema
+static Schema getOutputSchema(Schema &joinedSchema, unordered_set<string> &projectionSet)
+{
+	vector<string> field_names_in, field_names_out;
+	vector<enum FIELD_TYPE> field_types_in, field_types_out;
+	field_names_in = joinedSchema.getFieldNames();
+	field_types_in = joinedSchema.getFieldTypes();
+
+	for(int i = 0;i<field_names_in.size();i++)
+	{
+		if(projectionSet.count(field_names_in[i]))
+		{
+			field_names_out.push_back(field_names_in[i]);
+			field_types_out.push_back(field_types_in[i]);
+		}
+	}
+
+	Schema projected(field_names_out, field_types_out);
+
+	return projected;
 }
 
 /*--------------Private Class Functions-------------*/
@@ -144,6 +262,7 @@ bool DatabaseEngine::execInsertQuery(Node *root)
 		outputRel = execSelectQuery(root, false);
 		if(outputRel ==NULL)
 			return false;
+		
 		Schema outputSchema = outputRel->getSchema();
 		if(!cmpFields(outputSchema,schema))
 			return false;
@@ -212,9 +331,6 @@ bool DatabaseEngine::execInsertQuery(Node *root)
 			}
 			buffer_manager.storeFreeBlockIdx(freeMemIdx);
 		}
-		
-		// clean up select result
-		tempRelations.push_back(outputRel);
 		cleanUp();
 
 		//get a free mem block and append
@@ -392,6 +508,8 @@ Relation* DatabaseEngine::tableScan(string &tableName, vector<string> &selectLis
 	}
 
 	numBlocks = relation_ptr->getNumOfBlocks();
+	if(numBlocks ==0)
+		resultInMemory = false;
 	inMemIdx = buffer_manager.getFreeBlockIdx();
 	input = mem->getBlock(inMemIdx);
 
@@ -529,7 +647,10 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 
 		finalTempRel = tableScan(tableList[0],selectList,whereString);
 		if(finalTempRel == NULL)
+		{
+			cleanUp();
 			return NULL;
+		}
 
 		tempRelations.push_back(finalTempRel);
 	}
@@ -538,8 +659,12 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 		// TODO: implemenet multitbale select
 		if(count(selectList.begin(),selectList.end(),orderByColumn) == 0)
 			selectList.push_back(orderByColumn);
-		log("Multitable Select to be implemeneted");
-		return NULL;
+		finalTempRel = lqpOptimize(tableList,selectList,whereString);
+		if(finalTempRel == NULL)
+		{
+			cleanUp();
+			return NULL;
+		}
 	}
 
 	if(hasOrderBy && hasDistinct)
@@ -559,7 +684,153 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 
 }
 
+// Performs logical query optimizations for joins on Select query
+Relation* DatabaseEngine::lqpOptimize(vector<string> &tableList, vector<string> &selectList,string &whereString)
+{
+	unordered_set<string> projectionSet(selectList.begin(),selectList.end());
+	Relation *outputRel, *rel1, *rel2;
+	int num1Blocks, num2Blocks;
+	if(tableList.size() == 2)
+	{
+		rel1 = schema_manager.getRelation(tableList[0]);
+		rel2 = schema_manager.getRelation(tableList[1]);
+		num1Blocks = rel1->getNumOfBlocks();
+		num2Blocks = rel2->getNumOfBlocks();
+		if(num2Blocks < num1Blocks)
+			swap(rel1,rel2);
+		outputRel = crossJoinRelations(rel1, rel2, projectionSet, whereString);
+	}
+	else
+	{
+		return NULL;
+	}
 
+	return outputRel;
+}
+
+// Cross Join 2 tables
+Relation* DatabaseEngine::crossJoinRelations(Relation *rel1, Relation* rel2,\
+	unordered_set<string> &projectionSet, string &whereString)
+{
+	unordered_map<string,enum FIELD_TYPE> colType;
+	unordered_map<string, Field> colValues;
+	CondEval whereCondEval;
+	bool whereExists, selectTuple;
+
+	Schema joinedSchema, outputSchema, rel1Schema, rel2Schema;
+	string joinedName, outputName;
+	Relation *outputRel, *joinedRel;
+
+	vector<Tuple> rel1Tuples, rel2Tuples;
+	int rel2MemIdx, outputMemIdx, startDiskIdx, endDiskIdx;
+	int currDiskBlock;
+	int rel1NumBlocks, rel2NumBlocks, subListSize;
+	int freeMemBlocks, k;
+
+	// Error Checking:
+	if(rel1 == NULL || rel2==NULL)
+		return NULL;
+
+	rel1NumBlocks = rel1->getNumOfBlocks();
+	rel2NumBlocks = rel2->getNumOfBlocks();
+	if(rel1NumBlocks == 0 || rel2NumBlocks == 0)
+		return NULL;
+	
+	// Step 1: process schemas
+	rel1Schema = rel1->getSchema();
+	rel2Schema = rel2->getSchema();
+	joinedSchema = joinSchemas(rel1Schema, rel2Schema,rel1,rel2);
+	joinedName = rel1->getRelationName() + "_" + rel2->getRelationName() + "_joined";
+	joinedRel = schema_manager.createRelation(joinedName, joinedSchema);
+	tempRelations.push_back(joinedRel);
+	
+	outputSchema = getOutputSchema(joinedSchema, projectionSet);
+
+	outputName = rel1->getRelationName() + "_" + rel2->getRelationName() + "_output";
+	outputRel = schema_manager.createRelation(outputName, outputSchema);
+	tempRelations.push_back(outputRel);
+
+	resultInMemory = false;
+
+	// Step 2: process where condition
+	if(whereString.length()>0)
+		whereExists = true;
+	else
+		whereExists = false;
+
+	// initialize where condition evaluator
+	if(whereExists)
+	{
+		schemaToMap(colType, joinedSchema);
+		whereCondEval.intialize(whereString,colType);
+	}
+
+	// Step 3: Setup Memories
+	buffer_manager.getAllFreeBlocks(memoryBlockIndices);
+	rel2MemIdx = memoryBlockIndices.back();
+	memoryBlockIndices.pop_back();
+	outputMemIdx = memoryBlockIndices.back();
+	memoryBlockIndices.pop_back();
+
+	// Step 5: Perform Join
+	currDiskBlock = 0;
+	freeMemBlocks = memoryBlockIndices.size();
+	subListSize = (rel1NumBlocks -1)/freeMemBlocks +1;
+	for(int i = 0; i<subListSize;i++)
+	{
+		startDiskIdx = i*freeMemBlocks;
+		endDiskIdx = startDiskIdx+ freeMemBlocks -1;
+		if(endDiskIdx > (rel1NumBlocks-1))
+			endDiskIdx = rel1NumBlocks-1;
+		k =0;
+		for(int j =startDiskIdx;j<=endDiskIdx;j++)
+		{
+			rel1->getBlock(j, k);
+			k++;
+		}
+		// get Rel1 Tuples
+		rel1Tuples = mem->getTuples(0,endDiskIdx - startDiskIdx + 1);
+		for(Tuple &rel1Tuple: rel1Tuples)
+		{
+			for(int l = 0;l<rel2NumBlocks;l++)
+			{
+				rel2->getBlock(l,rel2MemIdx);
+				rel2Tuples = mem->getTuples(rel2MemIdx,1);
+
+				// join and store the tuples
+				for(Tuple &rel2Tuple:rel2Tuples)
+				{
+					Tuple joinedTuple = joinTuples(rel1Tuple, rel2Tuple, joinedRel);
+					if(whereExists)
+					{
+						tupleToMap(joinedSchema, joinedTuple, colValues);
+						if(!(whereCondEval.evaluate(colValues)))
+							selectTuple = false;
+						else
+							selectTuple = true;
+					}
+					else
+						selectTuple = true;
+					if(selectTuple)
+					{
+						Tuple outTuple = outputRel->createTuple();
+						outTuple = projectTuple(joinedTuple,outputRel);					
+						appendTupleToRelation(outputRel,mem,outputMemIdx, outTuple);
+					}
+				}
+			}
+		}
+
+
+	}
+	// Step 6: Release all the memory
+	memoryBlockIndices.push_back(outputMemIdx);
+	memoryBlockIndices.push_back(rel2MemIdx);
+	buffer_manager.releaseBulkIdx(memoryBlockIndices);
+	buffer_manager.sort();
+
+	return outputRel;
+}
 // Main orderby function
 Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
 {

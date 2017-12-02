@@ -45,6 +45,14 @@ private:
 
 	// returns the pointer of temporary relation
 	Relation* tableScan(string &tableName, vector<string> &selectList, string whereCond);
+
+	// Performs cross Joins on 2 relations with/ without a where condition
+	Relation* crossJoinRelations(Relation *rel1, Relation* rel2, unordered_set<string> &projectionSet,\
+	 string &whereString);
+
+	// Performs logical query optimizations on select statment containing multiple Tables
+	Relation* lqpOptimize(vector<string> &tableList, vector<string> &selectList,string &whereString);
+
 	// logger functions to log output
 	void log(Relation *relation_ptr);
 	void log(Schema *schema);
