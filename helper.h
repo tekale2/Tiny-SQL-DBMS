@@ -26,19 +26,20 @@ bool appendTupleToMemory(MainMemory *mem, int memory_block_index, Tuple& tuple);
 void appendTupleToRelation(Relation* relation_ptr, MainMemory *mem, int memory_block_index, Tuple& tuple);
 
 // Performs onepass sort in memory
-void onePassSort(MainMemory *mem, vector<int> &memBlockIndices, string &colName, enum FIELD_TYPE field_type);
+void onePassSort(MainMemory *mem, vector<int> &memBlockIndices, string &colName,\
+ enum FIELD_TYPE field_type, bool doLog);
 
 // Performs two pass sort
 void twoPassSort(Relation *rel, Relation *temp, Relation *output, MainMemory *mem, BufferManager &buffer_manager,\
-	string &colName,enum FIELD_TYPE field_type);
+	string &colName,enum FIELD_TYPE field_type, bool doLog);
 
 // Performs duplicate elmination in memory
 void onePassRemoveDups(MainMemory *mem,vector<int> &memBlockIndices, BufferManager &buffer_manager,\
-	string &colName,enum FIELD_TYPE field_type);
+	string &colName,enum FIELD_TYPE field_type, bool doLog);
 
 // Performs two pass duplicate elmination
 void twoPassRemoveDups(Relation *rel, Relation *temp, Relation *output, MainMemory *mem, BufferManager &buffer_manager,\
-	string &colName,enum FIELD_TYPE field_type);
+	string &colName,enum FIELD_TYPE field_type, bool doLog);
 
 // contains helper functions for the query execution
 /* returns pointer to the required Node Type

@@ -118,19 +118,24 @@ void appendTupleToRelation(Relation* relation_ptr, MainMemory *mem, int memory_b
   }  
 }
 // Performs onepass sort in main memory
-void onePassSort(MainMemory *mem, vector<int> &memBlockIndices, string &colName, enum FIELD_TYPE field_type)
+void onePassSort(MainMemory *mem, vector<int> &memBlockIndices, string &colName,\
+ enum FIELD_TYPE field_type, bool doLog)
 {
 	vector<Tuple> tuples;
 	tuples = mem->getTuples(memBlockIndices[0],memBlockIndices.size());
 	sort(tuples.begin(),tuples.end(),TupleCmp(field_type,colName));
-	mem->setTuples(memBlockIndices[0],tuples);
+	if(!doLog)
+		mem->setTuples(memBlockIndices[0],tuples);
+	else
+		for(Tuple &t: tuples)
+			cout<<t<<endl;
 	return;
 }
 
 
 // Performs duplicate elmination in memory
 void onePassRemoveDups(MainMemory *mem,vector<int> &memBlockIndices, BufferManager &buffer_manager,\
-	string &colName,enum FIELD_TYPE field_type)
+	string &colName,enum FIELD_TYPE field_type, bool doLog)
 {
 	// get tuples and sort
 	vector<Tuple> tuples, output;
@@ -162,12 +167,17 @@ void onePassRemoveDups(MainMemory *mem,vector<int> &memBlockIndices, BufferManag
 	memBlockIndices.push_back(freeMemIdx);
 	for(Tuple &t:output)
 	{
-		if (!appendTupleToMemory(mem, freeMemIdx,t))
+		if(!doLog)
 		{
-				freeMemIdx = buffer_manager.getFreeBlockIdx();
-				memBlockIndices.push_back(freeMemIdx);
-				appendTupleToMemory(mem, freeMemIdx,t);
+			if (!appendTupleToMemory(mem, freeMemIdx,t))
+			{
+					freeMemIdx = buffer_manager.getFreeBlockIdx();
+					memBlockIndices.push_back(freeMemIdx);
+					appendTupleToMemory(mem, freeMemIdx,t);
+			}
 		}
+		else
+			cout<<t<<endl;
 	}
 
 	return;
@@ -176,7 +186,7 @@ void onePassRemoveDups(MainMemory *mem,vector<int> &memBlockIndices, BufferManag
 
 // Performs 2 pass sorting and returns new Relation
 void twoPassSort(Relation *rel, Relation *temp, Relation *output, MainMemory *mem, BufferManager &buffer_manager,\
-	string &colName,enum FIELD_TYPE field_type)
+	string &colName,enum FIELD_TYPE field_type, bool doLog)
 {
 	vector<queue<QElement>> subList;
 	priority_queue<HeapElement, vector<HeapElement>, greater<HeapElement> > minHeap;
@@ -210,7 +220,7 @@ void twoPassSort(Relation *rel, Relation *temp, Relation *output, MainMemory *me
 		used = freeMemBlockIndices;
 		used.resize((endDiskIdx - startDiskIdx + 1));
 		// perform one pass sort
-		onePassSort(mem, used, colName,field_type);
+		onePassSort(mem, used, colName,field_type, false);
 		
 		// store back the result
 		k =0;
@@ -265,13 +275,20 @@ void twoPassSort(Relation *rel, Relation *temp, Relation *output, MainMemory *me
 		blkPtr = mem->getBlock(heapElement.currMemIdx);
 		Tuple tuple = blkPtr->getTuple(heapElement.tupleIdx);
 
-		if(!appendTupleToMemory(mem, outputIdx,tuple))
+		if(!doLog)
 		{
-			output->setBlock(currDiskBlock,outputIdx);
-			currDiskBlock++;
-			blkPtr = mem->getBlock(outputIdx);
-			blkPtr->clear();
-			appendTupleToMemory(mem, outputIdx,tuple);
+			if(!appendTupleToMemory(mem, outputIdx,tuple))
+			{
+				output->setBlock(currDiskBlock,outputIdx);
+				currDiskBlock++;
+				blkPtr = mem->getBlock(outputIdx);
+				blkPtr->clear();
+				appendTupleToMemory(mem, outputIdx,tuple);
+			}
+		}
+		else
+		{
+			cout<<tuple<<endl;
 		}
 		// load another tuple from the sublist
 		if(!subList[heapElement.currMemIdx].empty())
@@ -316,7 +333,8 @@ void twoPassSort(Relation *rel, Relation *temp, Relation *output, MainMemory *me
 
 		}
 	}
-	output->setBlock(currDiskBlock,outputIdx);
+	if(!doLog)
+		output->setBlock(currDiskBlock,outputIdx);
 
 	// clear any used memory and return
 	freeMemBlockIndices.push_back(outputIdx);
@@ -327,7 +345,7 @@ void twoPassSort(Relation *rel, Relation *temp, Relation *output, MainMemory *me
 }
 
 void twoPassRemoveDups(Relation *rel, Relation *temp, Relation *output, MainMemory *mem, BufferManager &buffer_manager,\
-	string &colName,enum FIELD_TYPE field_type)
+	string &colName,enum FIELD_TYPE field_type, bool doLog)
 {
 	vector<queue<QElement>> subList;
 	priority_queue<HeapElement, vector<HeapElement>, greater<HeapElement> > minHeap;
@@ -363,7 +381,7 @@ void twoPassRemoveDups(Relation *rel, Relation *temp, Relation *output, MainMemo
 		used = freeMemBlockIndices;
 		used.resize((endDiskIdx - startDiskIdx + 1));
 		// perform one pass sort
-		onePassSort(mem, used, colName,field_type);
+		onePassSort(mem, used, colName,field_type, false);
 		
 		// store back the result
 		k =0;
@@ -431,14 +449,19 @@ void twoPassRemoveDups(Relation *rel, Relation *temp, Relation *output, MainMemo
 		}
 		if(append)
 		{
-			if(!appendTupleToMemory(mem, outputIdx,tuple))
+			if(!doLog)
 			{
-				output->setBlock(currDiskBlock,outputIdx);
-				currDiskBlock++;
-				blkPtr = mem->getBlock(outputIdx);
-				blkPtr->clear();
-				appendTupleToMemory(mem, outputIdx,tuple);
+				if(!appendTupleToMemory(mem, outputIdx,tuple))
+				{
+					output->setBlock(currDiskBlock,outputIdx);
+					currDiskBlock++;
+					blkPtr = mem->getBlock(outputIdx);
+					blkPtr->clear();
+					appendTupleToMemory(mem, outputIdx,tuple);
+				}
 			}
+			else
+				cout<<tuple<<endl;
 		}
 
 		// load another tuple from the sublist
@@ -484,7 +507,8 @@ void twoPassRemoveDups(Relation *rel, Relation *temp, Relation *output, MainMemo
 
 		}
 	}
-	output->setBlock(currDiskBlock,outputIdx);
+	if(!doLog)
+		output->setBlock(currDiskBlock,outputIdx);
 
 	// clear any used memory and return
 	freeMemBlockIndices.push_back(outputIdx);

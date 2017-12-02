@@ -430,7 +430,7 @@ bool DatabaseEngine::execDeleteQuery(Node *root)
 // Exectues select statement for single table. Output is stored in memory if small
 // Or else the output is stored as temp relation on the disk
 
-Relation* DatabaseEngine::tableScan(string &tableName, vector<string> &selectList, string whereCond)
+Relation* DatabaseEngine::tableScan(string &tableName, vector<string> &selectList, string whereCond, bool doLog)
 {
 	unordered_map<string,enum FIELD_TYPE> colType;
 	unordered_map<string, Field> colValues;
@@ -492,7 +492,10 @@ Relation* DatabaseEngine::tableScan(string &tableName, vector<string> &selectLis
 	outRelation_ptr = schema_manager.createRelation(tempRelName,outputSchema);
 	if(outRelation_ptr == NULL)
 		return NULL;
-
+	
+	if(doLog)
+		log(outputSchema);
+	
 	resultInMemory = true;
 
 	if(whereCond.length()>0)
@@ -559,7 +562,11 @@ Relation* DatabaseEngine::tableScan(string &tableName, vector<string> &selectLis
 		// Step 2 insert the extracted/projected tuples into mem/relation
 		for(Tuple &t:outputTuples)
 		{
-			if(!resultInMemory)
+			if(doLog)
+			{
+				log(t);
+			}
+			else if(!resultInMemory)
 			{
 				appendTupleToRelation(outRelation_ptr, mem, currIdx, t);
 			}
@@ -644,8 +651,10 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 			if(count(selectList.begin(),selectList.end(),orderByColumn) == 0)
 				selectList.push_back(orderByColumn);
 		}
-
-		finalTempRel = tableScan(tableList[0],selectList,whereString);
+		if(!hasOrderBy && !hasDistinct)
+			finalTempRel = tableScan(tableList[0],selectList,whereString, doLog);
+		else
+			finalTempRel = tableScan(tableList[0],selectList,whereString, false);
 		if(finalTempRel == NULL)
 		{
 			cleanUp();
@@ -656,10 +665,16 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 	}
 	else
 	{
-		// TODO: implemenet multitbale select
-		if(count(selectList.begin(),selectList.end(),orderByColumn) == 0)
-			selectList.push_back(orderByColumn);
-		finalTempRel = lqpOptimize(tableList,selectList,whereString);
+		if(hasOrderBy)
+		{
+			if(count(selectList.begin(),selectList.end(),orderByColumn) == 0)
+				selectList.push_back(orderByColumn);
+		}
+		if(!hasOrderBy && !hasDistinct)
+			finalTempRel = lqpOptimize(tableList,selectList,whereString, doLog);
+		else
+			finalTempRel = lqpOptimize(tableList,selectList,whereString, false);
+
 		if(finalTempRel == NULL)
 		{
 			cleanUp();
@@ -668,28 +683,56 @@ Relation* DatabaseEngine::execSelectQuery(Node *root, bool doLog)
 	}
 
 	if(hasOrderBy && hasDistinct)
-		finalTempRel = execDistinct(finalTempRel,orderByColumn);
+		finalTempRel = execDistinct(finalTempRel,orderByColumn, doLog);
 	else if(hasOrderBy)
-		finalTempRel = execOrderBy(finalTempRel,orderByColumn);
+		finalTempRel = execOrderBy(finalTempRel,orderByColumn, doLog);
 	else if(hasDistinct)
 	{
 		Schema sch= finalTempRel->getSchema();
-		finalTempRel = execDistinct(finalTempRel,sch.getFieldNames()[0]);
+		finalTempRel = execDistinct(finalTempRel,sch.getFieldNames()[0], doLog);
 	}
-
-	if(doLog)
-		log(finalTempRel);
 	
 	return finalTempRel;
 
 }
 
 // Performs logical query optimizations for joins on Select query
-Relation* DatabaseEngine::lqpOptimize(vector<string> &tableList, vector<string> &selectList,string &whereString)
+Relation* DatabaseEngine::lqpOptimize(vector<string> &tableList, vector<string> &selectList,\
+	string &whereString, bool doLog)
 {
-	unordered_set<string> projectionSet(selectList.begin(),selectList.end());
-	Relation *outputRel, *rel1, *rel2;
+	unordered_set<string> projectionSet, allColumnSet, tempProjectionSet;
+	Relation *outputRel, *rel1, *rel2, *temp;
 	int num1Blocks, num2Blocks;
+	Schema schema;
+	vector<string> field_names;
+
+	resultInMemory = false;
+	for(string &str:tableList)
+	{
+		temp = schema_manager.getRelation(str);
+		if(temp == NULL)
+			return NULL;
+		schema = temp->getSchema();
+		field_names = schema.getFieldNames();
+		for(int i = 0;i<field_names.size();i++)
+		{
+			string rename = str+"."+field_names[i];
+			allColumnSet.insert(rename);
+		}
+	}
+	
+	// Create a projection set
+	if(selectList[0] == "*")
+	{
+		projectionSet = allColumnSet;
+	}
+	else
+	{
+		for(string &str:selectList)
+			projectionSet.insert(str);
+	}
+
+	// Create a projection List
 	if(tableList.size() == 2)
 	{
 		rel1 = schema_manager.getRelation(tableList[0]);
@@ -698,19 +741,18 @@ Relation* DatabaseEngine::lqpOptimize(vector<string> &tableList, vector<string> 
 		num2Blocks = rel2->getNumOfBlocks();
 		if(num2Blocks < num1Blocks)
 			swap(rel1,rel2);
-		outputRel = crossJoinRelations(rel1, rel2, projectionSet, whereString);
+		outputRel = crossJoinRelations(rel1, rel2, projectionSet, whereString, doLog);
+		return outputRel;
 	}
-	else
-	{
-		return NULL;
-	}
+
+	//for(int i =)
 
 	return outputRel;
 }
 
 // Cross Join 2 tables
 Relation* DatabaseEngine::crossJoinRelations(Relation *rel1, Relation* rel2,\
-	unordered_set<string> &projectionSet, string &whereString)
+	unordered_set<string> &projectionSet, string &whereString, bool doLog)
 {
 	unordered_map<string,enum FIELD_TYPE> colType;
 	unordered_map<string, Field> colValues;
@@ -750,7 +792,8 @@ Relation* DatabaseEngine::crossJoinRelations(Relation *rel1, Relation* rel2,\
 	outputRel = schema_manager.createRelation(outputName, outputSchema);
 	tempRelations.push_back(outputRel);
 
-	resultInMemory = false;
+	if(doLog)
+		log(outputSchema);
 
 	// Step 2: process where condition
 	if(whereString.length()>0)
@@ -790,13 +833,12 @@ Relation* DatabaseEngine::crossJoinRelations(Relation *rel1, Relation* rel2,\
 		}
 		// get Rel1 Tuples
 		rel1Tuples = mem->getTuples(0,endDiskIdx - startDiskIdx + 1);
-		for(Tuple &rel1Tuple: rel1Tuples)
+		for(int l = 0; l<rel2NumBlocks;l++)
 		{
-			for(int l = 0;l<rel2NumBlocks;l++)
+			rel2->getBlock(l,rel2MemIdx);
+			rel2Tuples = mem->getTuples(rel2MemIdx,1);
+			for(Tuple &rel1Tuple: rel1Tuples)
 			{
-				rel2->getBlock(l,rel2MemIdx);
-				rel2Tuples = mem->getTuples(rel2MemIdx,1);
-
 				// join and store the tuples
 				for(Tuple &rel2Tuple:rel2Tuples)
 				{
@@ -814,8 +856,11 @@ Relation* DatabaseEngine::crossJoinRelations(Relation *rel1, Relation* rel2,\
 					if(selectTuple)
 					{
 						Tuple outTuple = outputRel->createTuple();
-						outTuple = projectTuple(joinedTuple,outputRel);					
-						appendTupleToRelation(outputRel,mem,outputMemIdx, outTuple);
+						outTuple = projectTuple(joinedTuple,outputRel);
+						if(!doLog)				
+							appendTupleToRelation(outputRel,mem,outputMemIdx, outTuple);
+						else
+							log(outTuple);
 					}
 				}
 			}
@@ -828,11 +873,12 @@ Relation* DatabaseEngine::crossJoinRelations(Relation *rel1, Relation* rel2,\
 	memoryBlockIndices.push_back(rel2MemIdx);
 	buffer_manager.releaseBulkIdx(memoryBlockIndices);
 	buffer_manager.sort();
+	memoryBlockIndices.clear();
 
 	return outputRel;
 }
 // Main orderby function
-Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
+Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName, bool doLog)
 {
 	int numBlocks, numMemBlocks;
 	string tempName, finalname;
@@ -848,6 +894,9 @@ Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
 	numMemBlocks = buffer_manager.getFreeBlocksCount();
 	cout<<"Actual MemBlocks: "<< mem->getMemorySize()<<endl;
 	cout<<"Free blocks: "<<numMemBlocks<<endl;
+
+	if(doLog)
+		log(schema);
 	for(int i = 0; i<field_names.size();i++ )
 	{
 		if(field_names[i] == colName)
@@ -859,7 +908,7 @@ Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
 	if(resultInMemory)
 	{
 		// direct one pass
-		onePassSort(mem, memoryBlockIndices, colName,field_type);
+		onePassSort(mem, memoryBlockIndices, colName,field_type, doLog);
 		returnRel = rel;
 	}
 	else if(numBlocks <= numMemBlocks)
@@ -875,7 +924,7 @@ Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
 			memoryBlockIndices.push_back(freeMemIdx);
 
 		}
-		onePassSort(mem, memoryBlockIndices, colName,field_type);
+		onePassSort(mem, memoryBlockIndices, colName,field_type, doLog);
 		returnRel = rel;
 
 	}
@@ -885,7 +934,7 @@ Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
 		returnRel = schema_manager.createRelation(finalname,schema);
 		tempName = rel->getRelationName() + "_Sorted_temporary_out";
 		tempRel = schema_manager.createRelation(tempName,schema);
-		twoPassSort(rel, tempRel, returnRel, mem, buffer_manager,colName,field_type);
+		twoPassSort(rel, tempRel, returnRel, mem, buffer_manager,colName,field_type, doLog);
 		tempRelations.push_back(returnRel);
 		tempRelations.push_back(tempRel);
 	}
@@ -899,7 +948,7 @@ Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName)
 }
 
 // Main Distinct function
-Relation* DatabaseEngine::execDistinct(Relation *rel, string colName)
+Relation* DatabaseEngine::execDistinct(Relation *rel, string colName, bool doLog)
 {
 	int numBlocks, numMemBlocks;
 	vector<string> field_names;
@@ -915,6 +964,10 @@ Relation* DatabaseEngine::execDistinct(Relation *rel, string colName)
 	numMemBlocks = buffer_manager.getFreeBlocksCount();
 	cout<<"Actual MemBlocks: "<< mem->getMemorySize()<<endl;
 	cout<<"Free blocks: "<<numMemBlocks<<endl;
+	
+	if(doLog)
+		log(schema);
+	
 	for(int i = 0; i<field_names.size();i++ )
 	{
 		if(field_names[i] == colName)
@@ -923,10 +976,12 @@ Relation* DatabaseEngine::execDistinct(Relation *rel, string colName)
 			break;
 		}
 	}
+
 	if(resultInMemory)
 	{
 		// direct one pass
-		onePassRemoveDups(mem,memoryBlockIndices,buffer_manager,colName,field_type);
+		onePassRemoveDups(mem,memoryBlockIndices,buffer_manager,colName,field_type,\
+			doLog);
 		returnRel = rel;
 	}
 	else if(numBlocks <= numMemBlocks)
@@ -942,7 +997,8 @@ Relation* DatabaseEngine::execDistinct(Relation *rel, string colName)
 			memoryBlockIndices.push_back(freeMemIdx);
 
 		}
-		onePassRemoveDups(mem,memoryBlockIndices,buffer_manager,colName,field_type);
+		onePassRemoveDups(mem,memoryBlockIndices,buffer_manager,colName,field_type,\
+			doLog);
 		returnRel = rel;
 
 	}
@@ -952,7 +1008,8 @@ Relation* DatabaseEngine::execDistinct(Relation *rel, string colName)
 		returnRel = schema_manager.createRelation(finalname,schema);
 		tempName = rel->getRelationName() + "_distinct_temporary_out";
 		tempRel = schema_manager.createRelation(tempName,schema);
-		twoPassRemoveDups(rel, tempRel, returnRel, mem, buffer_manager,colName,field_type);
+		twoPassRemoveDups(rel, tempRel, returnRel, mem, buffer_manager,colName,field_type,\
+			doLog);
 		tempRelations.push_back(returnRel);
 		tempRelations.push_back(tempRel);
 	}
@@ -980,10 +1037,10 @@ void DatabaseEngine::cleanUp()
 // logger functions to log output to std out
 // TODO: log to a file after all queries are implemented
 
-void DatabaseEngine::log(Schema *schema)
+void DatabaseEngine::log(Schema &schema)
 {
 	vector<string> field_names;
-	field_names = schema->getFieldNames();
+	field_names = schema.getFieldNames();
 
 	for(string &str:field_names)
 		cout<<str<<" ";
@@ -994,45 +1051,6 @@ void DatabaseEngine::log(Tuple &tuple)
 {
 	cout<<tuple<<endl;
 	return;
-}
-
-
-void DatabaseEngine::log(Relation *relation_ptr)
-{
-	Block *memBlockPtr;
-	int freeMemIdx, numBlocks;
-	vector<Tuple> tuples;
-	if(relation_ptr == NULL)
-		return;
-	Schema schema = relation_ptr->getSchema();
-	log(&schema);
-
-	if(resultInMemory)
-	{
-
-		tuples = mem->getTuples(memoryBlockIndices[0],memoryBlockIndices.size());	
-		for(Tuple &t: tuples)
-			log(t);
-	}
-	else
-	{
-		numBlocks = relation_ptr->getNumOfBlocks();
-		freeMemIdx = buffer_manager.getFreeBlockIdx();
-
-		for(int i= 0; i<numBlocks;i++)
-		{
-			memBlockPtr = mem->getBlock(freeMemIdx);
-			memBlockPtr->clear();
-			//load the memInBlock
-			relation_ptr->getBlock(i,freeMemIdx);
-			tuples = memBlockPtr->getTuples();
-			for(Tuple &t: tuples)
-				log(t);
-
-		}
-		buffer_manager.storeFreeBlockIdx(freeMemIdx);
-	}
-
 }
 
 void DatabaseEngine::log(string value)

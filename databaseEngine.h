@@ -39,30 +39,30 @@ private:
 	bool execInsertQuery(Node *root);
 	bool execDeleteQuery(Node *root);
 	Relation* execSelectQuery(Node *root, bool doLog);
-	Relation* execOrderBy(Relation *rel, string colName);
-	Relation* execDistinct(Relation *rel, string colName);
+	Relation* execOrderBy(Relation *rel, string colName, bool doLog);
+	Relation* execDistinct(Relation *rel, string colName, bool doLog);
 	void cleanUp();
 
 	// returns the pointer of temporary relation
-	Relation* tableScan(string &tableName, vector<string> &selectList, string whereCond);
+	Relation* tableScan(string &tableName, vector<string> &selectList,\
+	 string whereCond, bool doLog);
 
 	// Performs cross Joins on 2 relations with/ without a where condition
 	Relation* crossJoinRelations(Relation *rel1, Relation* rel2, unordered_set<string> &projectionSet,\
-	 string &whereString);
+	 string &whereString, bool doLog);
 
 	// Performs logical query optimizations on select statment containing multiple Tables
-	Relation* lqpOptimize(vector<string> &tableList, vector<string> &selectList,string &whereString);
+	Relation* lqpOptimize(vector<string> &tableList, vector<string> &selectList,\
+		string &whereString, bool doLog);
 
 	// logger functions to log output
-	void log(Relation *relation_ptr);
-	void log(Schema *schema);
+	void log(Schema &schema);
 	void log(Tuple &tuple);
 	void log(string value);
 
 public:
 
 	DatabaseEngine(MainMemory *mem, Disk *disk);
-
 	// the main functions which takens in raw query as input
 	void execQuery(string query);
 
