@@ -153,6 +153,98 @@ void CondEval::infixToPostfix(string cond)
     return;
 }
 
+static vector<string> splitByAnd(string str)
+{
+  vector<string>result;
+  size_t lastPos = 0;
+  size_t pos = str.find(" AND ");
+  while(pos != string::npos)
+  {
+    result.push_back(str.substr(lastPos, pos - lastPos));
+    lastPos = pos+5;
+    pos = str.find(" AND ", lastPos);
+  }
+  result.push_back(str.substr(lastPos));
+  return result;
+}
+
+static unordered_set<string> getTablesInWhere(string &whereString, unordered_set<string> &allColumnSet)
+{
+  unordered_set<string> result;
+  vector<string> tokens;
+  string tokenStr = whereString;
+  string temp;
+  tokens = tokenizeWhere(tokenStr);
+  
+  for(string &str:tokens)
+  {
+    if(allColumnSet.count(str))
+    {
+      size_t pos = str.find(".");
+      temp = str.substr(0,pos);
+      result.insert(temp);
+    }
+  }
+  return result;
+}
+
+static bool tablesMatch(unordered_set<string> &smallSet,unordered_set<string> &currJoinedTables)
+{
+  bool result = true;
+  for(auto it = smallSet.begin(); it!=smallSet.end(); it++)
+  {
+    if(currJoinedTables.count(*it) == 0)
+    {
+      result = false;
+      break;
+    }
+  }
+  return result;
+}
+/*--------------------Helper Functions-------------------*/
+vector<string> getVarsInwhere(string &whereString, unordered_set<string> &allColumnSet)
+{
+  vector<string> tokens, result;
+  string tokenStr = whereString;
+  tokens = tokenizeWhere(tokenStr);
+  for(string &str:tokens)
+  {
+    if(allColumnSet.count(str))
+      result.push_back(str);
+  }
+  return result;
+}
+
+void splitByAndPopulate(string &whereString, unordered_set<string> &allColumnSet,\
+  unordered_map<string,unordered_set<string>> &whereSplit)
+{
+  vector<string> splitted;
+  splitted = splitByAnd(whereString);
+  for(string &str:splitted)
+    whereSplit[str] = getTablesInWhere(str,allColumnSet);
+  return;
+}
+
+string getWhere(unordered_map<string,unordered_set<string>> &whereSplit, \
+  unordered_set<string> &currJoinedTables)
+{
+  string result = "";
+  vector<string> eraseList;
+  for(auto it = whereSplit.begin(); it!=whereSplit.end(); it++)
+  {
+    if(tablesMatch(it->second,currJoinedTables))
+    {
+      if(result == "")
+        result = it->first;
+      else
+        result = result + " AND "+ it->first;
+      eraseList.push_back(it->first);
+    }
+  }
+  for(string &str:eraseList)
+    whereSplit.erase(str);
+  return result;
+}
 /*--------------------public Class Functions-------------*/
 
 

@@ -15,6 +15,12 @@ static bool cmpFields(Schema s1, Schema s2)
 	return f1 == f2;
 }
 
+// Sorting relations by size
+bool cmpRelation (const Relation *rel1, const Relation *rel2)
+{
+	return rel1->getNumOfBlocks() < rel2->getNumOfBlocks();
+}
+
 // Converts a given schema to a map
 static void schemaToMap(unordered_map<string,enum FIELD_TYPE> &colType, Schema &schema)
 {
@@ -701,11 +707,19 @@ Relation* DatabaseEngine::lqpOptimize(vector<string> &tableList, vector<string> 
 	string &whereString, bool doLog)
 {
 	unordered_set<string> projectionSet, allColumnSet, tempProjectionSet;
+	unordered_map<string,unordered_set<string>> whereSplit;
+	unordered_set<string> currJoinedTables;
+	unordered_set<string> tempTables;
 	Relation *outputRel, *rel1, *rel2, *temp;
-	int num1Blocks, num2Blocks;
+	int num1Blocks, num2Blocks, i;
 	Schema schema;
+	string relName, currWhere;
 	vector<string> field_names;
-
+	vector<string> variablesInWhere;
+	vector<Relation *> relationList;
+	bool whereExists = (whereString.length() > 0);
+	bool hasOR = false;
+	bool hasAND = false;
 	resultInMemory = false;
 	for(string &str:tableList)
 	{
@@ -745,8 +759,78 @@ Relation* DatabaseEngine::lqpOptimize(vector<string> &tableList, vector<string> 
 		return outputRel;
 	}
 
-	//for(int i =)
+	for(string &str:tableList)
+	{
+		temp = schema_manager.getRelation(str);
+		if(temp==NULL)
+			return NULL;
+		relationList.push_back(temp);
+	}
+	sort(relationList.begin(),relationList.end(),cmpRelation);
 
+	tempProjectionSet = projectionSet;
+	if(whereExists)
+	{
+		variablesInWhere = getVarsInwhere(whereString, allColumnSet);
+
+		for(string &str:variablesInWhere)
+			tempProjectionSet.insert(str);
+
+		// find OR
+		if(whereString.find("OR") != string::npos)
+			hasOR = true;
+
+		// should have AND and not be within brackets
+		if(!hasOR && whereString.find("AND") != string::npos && \
+			 whereString.find("(") == string::npos)
+		{
+			hasAND = true;
+		}
+		if(hasAND)
+		{
+			// tokenize string by AND and populate the dataStructure
+			splitByAndPopulate(whereString, allColumnSet, whereSplit);
+		}
+		else
+		{
+			for(string &str:tableList)
+				tempTables.insert(str);
+			whereSplit[whereString] = tempTables;
+		}
+	}
+	
+	// Join the relations with tempRelation and push where conditions down
+	rel1 = relationList[0];
+	relName = rel1->getRelationName();
+	currJoinedTables.insert(relName);
+	for(i = 1; i<(relationList.size()-1);  i++)
+	{
+		// turn off logging
+		rel2 = relationList[i];
+		relName = rel2->getRelationName();
+		currJoinedTables.insert(relName);
+		num1Blocks = rel1->getNumOfBlocks();
+		num2Blocks = rel2->getNumOfBlocks();
+		if(num2Blocks < num1Blocks)
+			swap(rel1,rel2);
+		currWhere = getWhere(whereSplit, currJoinedTables);
+		outputRel = crossJoinRelations(rel1, rel2, tempProjectionSet, currWhere, false);
+		rel1 = outputRel;
+
+	}
+
+	// final join with requested projection
+	// turn on logging
+
+	rel2 = relationList[i];
+	relName = rel2->getRelationName();
+	currJoinedTables.insert(relName);
+	num1Blocks = rel1->getNumOfBlocks();
+	num2Blocks = rel2->getNumOfBlocks();
+	if(num2Blocks < num1Blocks)
+		swap(rel1,rel2);
+	currWhere = getWhere(whereSplit, currJoinedTables);
+	outputRel = crossJoinRelations(rel1, rel2, projectionSet, currWhere, doLog);
 	return outputRel;
 }
 

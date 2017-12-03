@@ -2269,3 +2269,2303 @@ Query Exec Time: 0.000000 ms
 ************************************************************
 
 
+
+
+************************************************************
+Input Query:->  CREATE TABLE r (a INT, b INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  CREATE TABLE s (b INT, c INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  CREATE TABLE t (a INT, c INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  SELECT * FROM r, s, t WHERE r.a=t.a AND r.b=s.b AND s.c=t.c
+r.a r.b s.b s.c t.a t.c 
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 109
+Query Exec Time: 8134.670000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  DROP TABLE r
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  DROP TABLE s
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  DROP TABLE t
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  CREATE TABLE t1 (c INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  CREATE TABLE t2 (c INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  CREATE TABLE t3 (c INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  CREATE TABLE t4 (c INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  CREATE TABLE t5 (c INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  CREATE TABLE t6 (c INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t1 (c) VALUES (0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t1 (c) VALUES (1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t1 (c) VALUES (2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t1 (c) VALUES (3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t1 (c) VALUES (4)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t2 (c) VALUES (0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t2 (c) VALUES (1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t2 (c) VALUES (2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t2 (c) VALUES (3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t3 (c) VALUES (0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t3 (c) VALUES (1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t3 (c) VALUES (2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t3 (c) VALUES (3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t4 (c) VALUES (0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t4 (c) VALUES (1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t5 (c) VALUES (0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t5 (c) VALUES (0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t6 (c) VALUES (0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  SELECT * FROM t1, t2, t3, t4, t5, t6
+t6.c t5.c t4.c t3.c t1.c t2.c 
+0	0	0	0	0	0	
+0	0	0	0	0	1	
+0	0	0	0	0	0	
+0	0	0	0	0	1	
+0	0	1	0	0	0	
+0	0	1	0	0	1	
+0	0	1	0	0	0	
+0	0	1	0	0	1	
+0	0	0	0	0	2	
+0	0	0	0	0	3	
+0	0	0	0	0	2	
+0	0	0	0	0	3	
+0	0	1	0	0	2	
+0	0	1	0	0	3	
+0	0	1	0	0	2	
+0	0	1	0	0	3	
+0	0	0	1	0	0	
+0	0	0	1	0	1	
+0	0	0	1	0	0	
+0	0	0	1	0	1	
+0	0	1	1	0	0	
+0	0	1	1	0	1	
+0	0	1	1	0	0	
+0	0	1	1	0	1	
+0	0	0	1	0	2	
+0	0	0	1	0	3	
+0	0	0	1	0	2	
+0	0	0	1	0	3	
+0	0	1	1	0	2	
+0	0	1	1	0	3	
+0	0	1	1	0	2	
+0	0	1	1	0	3	
+0	0	0	2	0	0	
+0	0	0	2	0	1	
+0	0	0	2	0	0	
+0	0	0	2	0	1	
+0	0	1	2	0	0	
+0	0	1	2	0	1	
+0	0	1	2	0	0	
+0	0	1	2	0	1	
+0	0	0	2	0	2	
+0	0	0	2	0	3	
+0	0	0	2	0	2	
+0	0	0	2	0	3	
+0	0	1	2	0	2	
+0	0	1	2	0	3	
+0	0	1	2	0	2	
+0	0	1	2	0	3	
+0	0	0	3	0	0	
+0	0	0	3	0	1	
+0	0	0	3	0	0	
+0	0	0	3	0	1	
+0	0	1	3	0	0	
+0	0	1	3	0	1	
+0	0	1	3	0	0	
+0	0	1	3	0	1	
+0	0	0	3	0	2	
+0	0	0	3	0	3	
+0	0	0	3	0	2	
+0	0	0	3	0	3	
+0	0	1	3	0	2	
+0	0	1	3	0	3	
+0	0	1	3	0	2	
+0	0	1	3	0	3	
+0	0	0	0	1	0	
+0	0	0	0	1	1	
+0	0	0	0	1	0	
+0	0	0	0	1	1	
+0	0	1	0	1	0	
+0	0	1	0	1	1	
+0	0	1	0	1	0	
+0	0	1	0	1	1	
+0	0	0	0	1	2	
+0	0	0	0	1	3	
+0	0	0	0	1	2	
+0	0	0	0	1	3	
+0	0	1	0	1	2	
+0	0	1	0	1	3	
+0	0	1	0	1	2	
+0	0	1	0	1	3	
+0	0	0	1	1	0	
+0	0	0	1	1	1	
+0	0	0	1	1	0	
+0	0	0	1	1	1	
+0	0	1	1	1	0	
+0	0	1	1	1	1	
+0	0	1	1	1	0	
+0	0	1	1	1	1	
+0	0	0	1	1	2	
+0	0	0	1	1	3	
+0	0	0	1	1	2	
+0	0	0	1	1	3	
+0	0	1	1	1	2	
+0	0	1	1	1	3	
+0	0	1	1	1	2	
+0	0	1	1	1	3	
+0	0	0	2	1	0	
+0	0	0	2	1	1	
+0	0	0	2	1	0	
+0	0	0	2	1	1	
+0	0	1	2	1	0	
+0	0	1	2	1	1	
+0	0	1	2	1	0	
+0	0	1	2	1	1	
+0	0	0	2	1	2	
+0	0	0	2	1	3	
+0	0	0	2	1	2	
+0	0	0	2	1	3	
+0	0	1	2	1	2	
+0	0	1	2	1	3	
+0	0	1	2	1	2	
+0	0	1	2	1	3	
+0	0	0	3	1	0	
+0	0	0	3	1	1	
+0	0	0	3	1	0	
+0	0	0	3	1	1	
+0	0	1	3	1	0	
+0	0	1	3	1	1	
+0	0	1	3	1	0	
+0	0	1	3	1	1	
+0	0	0	3	1	2	
+0	0	0	3	1	3	
+0	0	0	3	1	2	
+0	0	0	3	1	3	
+0	0	1	3	1	2	
+0	0	1	3	1	3	
+0	0	1	3	1	2	
+0	0	1	3	1	3	
+0	0	0	0	2	0	
+0	0	0	0	2	1	
+0	0	0	0	2	0	
+0	0	0	0	2	1	
+0	0	1	0	2	0	
+0	0	1	0	2	1	
+0	0	1	0	2	0	
+0	0	1	0	2	1	
+0	0	0	0	2	2	
+0	0	0	0	2	3	
+0	0	0	0	2	2	
+0	0	0	0	2	3	
+0	0	1	0	2	2	
+0	0	1	0	2	3	
+0	0	1	0	2	2	
+0	0	1	0	2	3	
+0	0	0	1	2	0	
+0	0	0	1	2	1	
+0	0	0	1	2	0	
+0	0	0	1	2	1	
+0	0	1	1	2	0	
+0	0	1	1	2	1	
+0	0	1	1	2	0	
+0	0	1	1	2	1	
+0	0	0	1	2	2	
+0	0	0	1	2	3	
+0	0	0	1	2	2	
+0	0	0	1	2	3	
+0	0	1	1	2	2	
+0	0	1	1	2	3	
+0	0	1	1	2	2	
+0	0	1	1	2	3	
+0	0	0	2	2	0	
+0	0	0	2	2	1	
+0	0	0	2	2	0	
+0	0	0	2	2	1	
+0	0	1	2	2	0	
+0	0	1	2	2	1	
+0	0	1	2	2	0	
+0	0	1	2	2	1	
+0	0	0	2	2	2	
+0	0	0	2	2	3	
+0	0	0	2	2	2	
+0	0	0	2	2	3	
+0	0	1	2	2	2	
+0	0	1	2	2	3	
+0	0	1	2	2	2	
+0	0	1	2	2	3	
+0	0	0	3	2	0	
+0	0	0	3	2	1	
+0	0	0	3	2	0	
+0	0	0	3	2	1	
+0	0	1	3	2	0	
+0	0	1	3	2	1	
+0	0	1	3	2	0	
+0	0	1	3	2	1	
+0	0	0	3	2	2	
+0	0	0	3	2	3	
+0	0	0	3	2	2	
+0	0	0	3	2	3	
+0	0	1	3	2	2	
+0	0	1	3	2	3	
+0	0	1	3	2	2	
+0	0	1	3	2	3	
+0	0	0	0	3	0	
+0	0	0	0	3	1	
+0	0	0	0	3	0	
+0	0	0	0	3	1	
+0	0	1	0	3	0	
+0	0	1	0	3	1	
+0	0	1	0	3	0	
+0	0	1	0	3	1	
+0	0	0	0	3	2	
+0	0	0	0	3	3	
+0	0	0	0	3	2	
+0	0	0	0	3	3	
+0	0	1	0	3	2	
+0	0	1	0	3	3	
+0	0	1	0	3	2	
+0	0	1	0	3	3	
+0	0	0	1	3	0	
+0	0	0	1	3	1	
+0	0	0	1	3	0	
+0	0	0	1	3	1	
+0	0	1	1	3	0	
+0	0	1	1	3	1	
+0	0	1	1	3	0	
+0	0	1	1	3	1	
+0	0	0	1	3	2	
+0	0	0	1	3	3	
+0	0	0	1	3	2	
+0	0	0	1	3	3	
+0	0	1	1	3	2	
+0	0	1	1	3	3	
+0	0	1	1	3	2	
+0	0	1	1	3	3	
+0	0	0	2	3	0	
+0	0	0	2	3	1	
+0	0	0	2	3	0	
+0	0	0	2	3	1	
+0	0	1	2	3	0	
+0	0	1	2	3	1	
+0	0	1	2	3	0	
+0	0	1	2	3	1	
+0	0	0	2	3	2	
+0	0	0	2	3	3	
+0	0	0	2	3	2	
+0	0	0	2	3	3	
+0	0	1	2	3	2	
+0	0	1	2	3	3	
+0	0	1	2	3	2	
+0	0	1	2	3	3	
+0	0	0	3	3	0	
+0	0	0	3	3	1	
+0	0	0	3	3	0	
+0	0	0	3	3	1	
+0	0	1	3	3	0	
+0	0	1	3	3	1	
+0	0	1	3	3	0	
+0	0	1	3	3	1	
+0	0	0	3	3	2	
+0	0	0	3	3	3	
+0	0	0	3	3	2	
+0	0	0	3	3	3	
+0	0	1	3	3	2	
+0	0	1	3	3	3	
+0	0	1	3	3	2	
+0	0	1	3	3	3	
+0	0	0	0	4	0	
+0	0	0	0	4	1	
+0	0	0	0	4	0	
+0	0	0	0	4	1	
+0	0	1	0	4	0	
+0	0	1	0	4	1	
+0	0	1	0	4	0	
+0	0	1	0	4	1	
+0	0	0	0	4	2	
+0	0	0	0	4	3	
+0	0	0	0	4	2	
+0	0	0	0	4	3	
+0	0	1	0	4	2	
+0	0	1	0	4	3	
+0	0	1	0	4	2	
+0	0	1	0	4	3	
+0	0	0	1	4	0	
+0	0	0	1	4	1	
+0	0	0	1	4	0	
+0	0	0	1	4	1	
+0	0	1	1	4	0	
+0	0	1	1	4	1	
+0	0	1	1	4	0	
+0	0	1	1	4	1	
+0	0	0	1	4	2	
+0	0	0	1	4	3	
+0	0	0	1	4	2	
+0	0	0	1	4	3	
+0	0	1	1	4	2	
+0	0	1	1	4	3	
+0	0	1	1	4	2	
+0	0	1	1	4	3	
+0	0	0	2	4	0	
+0	0	0	2	4	1	
+0	0	0	2	4	0	
+0	0	0	2	4	1	
+0	0	1	2	4	0	
+0	0	1	2	4	1	
+0	0	1	2	4	0	
+0	0	1	2	4	1	
+0	0	0	2	4	2	
+0	0	0	2	4	3	
+0	0	0	2	4	2	
+0	0	0	2	4	3	
+0	0	1	2	4	2	
+0	0	1	2	4	3	
+0	0	1	2	4	2	
+0	0	1	2	4	3	
+0	0	0	3	4	0	
+0	0	0	3	4	1	
+0	0	0	3	4	0	
+0	0	0	3	4	1	
+0	0	1	3	4	0	
+0	0	1	3	4	1	
+0	0	1	3	4	0	
+0	0	1	3	4	1	
+0	0	0	3	4	2	
+0	0	0	3	4	3	
+0	0	0	3	4	2	
+0	0	0	3	4	3	
+0	0	1	3	4	2	
+0	0	1	3	4	3	
+0	0	1	3	4	2	
+0	0	1	3	4	3	
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1607
+Query Exec Time: 119930.410000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  DROP TABLE t1
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  DROP TABLE t2
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  DROP TABLE t3
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  DROP TABLE t4
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  DROP TABLE t5
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  DROP TABLE t6
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+

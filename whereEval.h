@@ -23,4 +23,9 @@ public:
   bool evaluate(unordered_map<string, Field> &colValues);
 };
 
+vector<string> getVarsInwhere(string &whereString, unordered_set<string> &allColumnSet);
+void splitByAndPopulate(string &whereString, unordered_set<string> &allColumnSet,\
+	unordered_map<string,unordered_set<string>> &whereSplit);
+string getWhere(unordered_map<string,unordered_set<string>> &whereSplit, \
+	unordered_set<string> &currJoinedTables);
 #endif
