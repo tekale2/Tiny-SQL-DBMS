@@ -976,8 +976,8 @@ Relation* DatabaseEngine::execOrderBy(Relation *rel, string colName, bool doLog)
 
 	numBlocks = rel->getNumOfBlocks();
 	numMemBlocks = buffer_manager.getFreeBlocksCount();
-	cout<<"Actual MemBlocks: "<< mem->getMemorySize()<<endl;
-	cout<<"Free blocks: "<<numMemBlocks<<endl;
+	//cout<<"Actual MemBlocks: "<< mem->getMemorySize()<<endl;
+	//cout<<"Free blocks: "<<numMemBlocks<<endl;
 
 	if(doLog)
 		log(schema);
@@ -1046,8 +1046,8 @@ Relation* DatabaseEngine::execDistinct(Relation *rel, string colName, bool doLog
 
 	numBlocks = rel->getNumOfBlocks();
 	numMemBlocks = buffer_manager.getFreeBlocksCount();
-	cout<<"Actual MemBlocks: "<< mem->getMemorySize()<<endl;
-	cout<<"Free blocks: "<<numMemBlocks<<endl;
+	//cout<<"Actual MemBlocks: "<< mem->getMemorySize()<<endl;
+	//cout<<"Free blocks: "<<numMemBlocks<<endl;
 	
 	if(doLog)
 		log(schema);

@@ -1169,8 +1169,6 @@ Query Exec Time: 4477.800000 ms
 
 ************************************************************
 Input Query:->  SELECT DISTINCT grade FROM course
-Actual MemBlocks: 10
-Free blocks: 2
 grade 
 A	
 B	
@@ -1189,8 +1187,6 @@ Query Exec Time: 4477.800000 ms
 
 ************************************************************
 Input Query:->  SELECT DISTINCT * FROM course
-Actual MemBlocks: 10
-Free blocks: 10
 sid homework project exam grade 
 1	99	100	100	A	
 2	100	100	99	B	
@@ -1223,8 +1219,6 @@ Query Exec Time: 30513.260000 ms
 
 ************************************************************
 Input Query:->  SELECT * FROM course ORDER BY exam
-Actual MemBlocks: 10
-Free blocks: 10
 sid homework project exam grade 
 16	0	0	0	E	
 16	0	0	0	E	
@@ -2066,8 +2060,6 @@ Query Exec Time: 9851.160000 ms
 
 ************************************************************
 Input Query:->  SELECT DISTINCT course.grade, course2.grade FROM course, course2 WHERE course.sid = course2.sid
-Actual MemBlocks: 10
-Free blocks: 10
 course2.grade course.grade 
 A	A	
 B	B	
@@ -2086,8 +2078,6 @@ Query Exec Time: 26568.280000 ms
 
 ************************************************************
 Input Query:->  SELECT * FROM course, course2 WHERE course.sid = course2.sid ORDER BY course.exam
-Actual MemBlocks: 10
-Free blocks: 10
 course2.sid course2.exam course2.grade course.sid course.homework course.project course.exam course.grade 
 16	25	E	16	0	0	0	E	
 16	25	E	16	0	0	0	E	
@@ -2232,8 +2222,6 @@ Query Exec Time: 9851.160000 ms
 
 ************************************************************
 Input Query:->  SELECT DISTINCT course.grade, course2.grade FROM course, course2 WHERE course.sid = course2.sid AND ( course.exam > course2.exam OR course.grade = "A" AND course2.grade = "A" ) ORDER BY course.exam
-Actual MemBlocks: 10
-Free blocks: 10
 course2.grade course.exam course.grade 
 A	66	A	
 A	100	A	
