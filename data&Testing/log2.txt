@@ -1,0 +1,10448 @@
+
+
+************************************************************
+Input Query:->  CREATE TABLE r (a INT, b INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  CREATE TABLE s (b INT, c INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  CREATE TABLE t (a INT, c INT)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 0
+Query Exec Time: 0.000000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1
+Query Exec Time: 74.630000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  SELECT * FROM r, s, t WHERE r.a=t.a AND r.b=s.b AND s.c=t.c
+t.a t.c r.a r.b s.b s.c 
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 105
+Query Exec Time: 7836.150000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  SELECT * FROM r, s, t WHERE r.a=t.a AND r.b=s.b AND s.c=t.c
+t.a t.c r.a r.b s.b s.c 
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 407
+Query Exec Time: 30374.410000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  SELECT * FROM r, s, t WHERE r.a=t.a AND r.b=s.b AND s.c=t.c
+t.a t.c r.a r.b s.b s.c 
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 971
+Query Exec Time: 72465.730000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO r (a, b) VALUES (100, 100)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO s (b, c) VALUES (101, 101)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (0, 0)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (1, 1)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (2, 2)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (3, 3)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  INSERT INTO t (a, c) VALUES (102, 102)
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 2
+Query Exec Time: 149.260000 ms
+************************************************************
+
+
+
+
+************************************************************
+Input Query:->  SELECT * FROM r, s, t WHERE r.a=t.a AND r.b=s.b AND s.c=t.c
+t.a t.c r.a r.b s.b s.c 
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+0	0	0	0	0	0	
+2	2	2	2	2	2	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+1	1	1	1	1	1	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+3	3	3	3	3	3	
+2	2	2	2	2	2	
+2	2	2	2	2	2	
+3	3	3	3	3	3	
+Query Exec Status: SUCCESS
+
+
+Disk I/O count: 1863
+Query Exec Time: 139035.690000 ms
+************************************************************
+
+
